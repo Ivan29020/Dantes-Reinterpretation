@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpoaq5amnhd53"]
+[gd_scene load_steps=3 format=3 uid="uid://dai07x206g2jq"]
 
-[ext_resource type="PackedScene" uid="uid://dsyn4xafij1ah" path="res://dante.tscn" id="1_j0goi"]
+[ext_resource type="PackedScene" uid="uid://81w40qbets7s" path="res://dante.tscn" id="1_j0goi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d4iej"]
 size = Vector2(20, 48)

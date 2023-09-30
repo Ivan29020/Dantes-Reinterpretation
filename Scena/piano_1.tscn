@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://dn37x3ltlsvbv"]
+[gd_scene load_steps=7 format=3 uid="uid://dn37x3ltlsvbv"]
+
+[ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://tile_map.tscn" id="1_5rgdw"]
+[ext_resource type="Texture2D" uid="uid://cr73gyuwdekbw" path="res://Grafiche/Dante Alighieri.png" id="1_kcj6e"]
+[ext_resource type="Script" path="res://Scena/Area2D1.gd" id="2_64pfk"]
+[ext_resource type="Script" path="res://Scena/Dante.gd" id="2_nqj76"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
+radius = 24.0208
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a8v7o"]
+radius = 6.0
+height = 20.0
 
 [node name="Piano 1" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_5rgdw")]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_64pfk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(157, 23)
+shape = SubResource("CircleShape2D_b2fsr")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(1, 0)
+script = ExtResource("2_nqj76")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_kcj6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_a8v7o")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

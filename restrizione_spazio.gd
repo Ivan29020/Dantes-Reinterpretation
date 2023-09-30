@@ -23,12 +23,10 @@ func _on_restriction_tick_timeout():
 	cambia_dimensione(-velocita_restrizione)
 
 func _on_body_exited(body):
-	if body is CharacterBody2D: #NOTA: Inserire la classe del giocatore
-		$timer_morte.start()
+	$timer_morte.start()
 
 func _on_body_entered(body):
-	if body is CharacterBody2D: #NOTA: Inserire la classe del giocatore
-		$timer_morte.stop()
+	$timer_morte.stop()
 
 func _on_timer_morte_timeout():
 	# Codice per il game over

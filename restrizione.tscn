@@ -7,6 +7,7 @@
 radius = 400.0
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 0
 script = ExtResource("1_tsfft")
 
 [node name="restriction_tick" type="Timer" parent="."]

@@ -1,7 +1,7 @@
-extends Area2D
+class_name proiettile extends Area2D
 
-@export var danni : int = 10
-@export var proiettile_giocatore : bool = false #false = proiettile nemico, true = proiettile giocatore
+var danni : int = 10
+var proiettile_giocatore : bool = false #false = proiettile nemico, true = proiettile giocatore
 
 var dir : Vector2 = Vector2.ZERO 
 var vel : int = 100

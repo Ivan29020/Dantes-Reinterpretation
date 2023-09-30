@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ti57crgqhtbb"
-path="res://.godot/imported/Dante idle 3.png-b10f3224925aca543775d891db93e6b2.ctex"
+uid="uid://f74o62bjntum"
+path="res://.godot/imported/Dante Back idle.png-ff9f0864e98989cd210511e0be221758.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Grafiche/Dante all idle/Dante idle 3.png"
-dest_files=["res://.godot/imported/Dante idle 3.png-b10f3224925aca543775d891db93e6b2.ctex"]
+source_file="res://Grafiche/Dante/Dante Back idle.png"
+dest_files=["res://.godot/imported/Dante Back idle.png-ff9f0864e98989cd210511e0be221758.ctex"]
 
 [params]
 

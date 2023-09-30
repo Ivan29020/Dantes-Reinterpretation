@@ -10,5 +10,5 @@ func _physics_process(delta):
 	movement.x = Input.get_axis("ui_left","ui_right")
 	movement.y = Input.get_axis("ui_up","ui_down")
 	movement = movement.normalized()
-	velocity = movement * SPEED * delta
+	velocity = movement * SPEED
 	move_and_slide()

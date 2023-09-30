@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eikwn727ifno"
-path="res://.godot/imported/Dante All 2.png-4c054d93912b5098dd7d7074891aa6e3.ctex"
+uid="uid://c5q7cqjvybl7q"
+path="res://.godot/imported/Dante front mov 2.png-7d7328724aa7dac460a12c404b8a56ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Grafiche/Dante all idle/Dante All 2.png"
-dest_files=["res://.godot/imported/Dante All 2.png-4c054d93912b5098dd7d7074891aa6e3.ctex"]
+source_file="res://Grafiche/Dante/Dante front mov 2.png"
+dest_files=["res://.godot/imported/Dante front mov 2.png-7d7328724aa7dac460a12c404b8a56ca.ctex"]
 
 [params]
 

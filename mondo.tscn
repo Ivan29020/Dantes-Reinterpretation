@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpoaq5amnhd53"]
+
+[ext_resource type="PackedScene" uid="uid://dsyn4xafij1ah" path="res://dante.tscn" id="1_j0goi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4iej"]
+size = Vector2(20, 48)
+
+[node name="Mondo" type="Node2D"]
+
+[node name="Dante" parent="." instance=ExtResource("1_j0goi")]
+position = Vector2(97, 62)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(139, 61)
+shape = SubResource("RectangleShape2D_d4iej")

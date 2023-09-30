@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dn5xatyhiohuv" path="res://Grafiche/Dante Alighieri Back.png" id="5_ncoff"]
 
 [node name="Icon" type="Sprite2D"]
-position = Vector2(450, 359)
+position = Vector2(439, 319)
 scale = Vector2(4, 4)
 texture = ExtResource("1_6nfvu")
 
@@ -20,9 +20,9 @@ position = Vector2(-160, 138)
 texture = ExtResource("3_glq3d")
 
 [node name="DanteAlighieri" type="Sprite2D" parent="."]
-position = Vector2(-116, 159)
+position = Vector2(-51.75, 137)
 texture = ExtResource("4_w7dcc")
 
 [node name="DanteAlighieriBack" type="Sprite2D" parent="."]
-position = Vector2(84, 182)
+position = Vector2(103.5, 141)
 texture = ExtResource("5_ncoff")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2rhx1j06u1cc"]
+
+[ext_resource type="Script" path="res://proiettile_base.gd" id="1_xypfq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cd6r1"]
+
+[node name="Proiettile_base" type="Area2D"]
+script = ExtResource("1_xypfq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cd6r1")

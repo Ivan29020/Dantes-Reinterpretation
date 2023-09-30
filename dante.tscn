@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dsyn4xafij1ah"]
+
+[ext_resource type="Script" path="res://Dante.gd" id="1_ajuo3"]
+[ext_resource type="Texture2D" uid="uid://ti57crgqhtbb" path="res://Grafiche/Dante all idle/Dante idle 3.png" id="2_3id15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0yf6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p44sr"]
+atlas = ExtResource("2_3id15")
+region = Rect2(0, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26oha"]
+atlas = ExtResource("2_3id15")
+region = Rect2(288, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4t1wp"]
+atlas = ExtResource("2_3id15")
+region = Rect2(288, 28, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07xgl"]
+atlas = ExtResource("2_3id15")
+region = Rect2(0, 28, 24, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hx0ku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p44sr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26oha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4t1wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07xgl")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Dante" type="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(0, 2)
+motion_mode = 1
+script = ExtResource("1_ajuo3")
+SPEED = 300.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_c0yf6")
+
+[node name="DanteAlighieri" type="AnimatedSprite2D" parent="."]
+position = Vector2(106, 82)
+sprite_frames = SubResource("SpriteFrames_hx0ku")
+animation = &"new_animation"
+frame_progress = 0.992084

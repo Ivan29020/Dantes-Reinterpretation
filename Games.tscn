@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cybyitp6f2eiu"]
+
+[ext_resource type="Script" path="res://Movimento.gd" id="1_xhy5u"]
+[ext_resource type="Texture2D" uid="uid://cr73gyuwdekbw" path="res://Grafiche/Dante Alighieri.png" id="2_0tdt5"]
+[ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="3_18c0d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtsph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55deb"]
+
+[node name="Movimento" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Dante" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_xhy5u")
+
+[node name="DanteAlighieri" type="Sprite2D" parent="Dante"]
+position = Vector2(109, 64)
+texture = ExtResource("2_0tdt5")
+
+[node name="Dante2" type="AnimatedSprite2D" parent="Dante"]
+sprite_frames = SubResource("SpriteFrames_wtsph")
+script = ExtResource("3_18c0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dante"]
+shape = SubResource("RectangleShape2D_55deb")

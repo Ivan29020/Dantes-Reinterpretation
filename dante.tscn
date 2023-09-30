@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://81w40qbets7s"]
 
-[ext_resource type="Script" path="res://Dante.gd" id="1_ajuo3"]
+[ext_resource type="Script" path="res://Giocatore.gd" id="1_ssre8"]
 [ext_resource type="Texture2D" uid="uid://ssdq6yetv3ku" path="res://Grafiche/Dante/Dante idle front.png" id="3_7c1sn"]
 [ext_resource type="Texture2D" uid="uid://b7wphc4a400o7" path="res://Grafiche/Dante/Dante Alighieri Left Side.png" id="4_hagnn"]
 [ext_resource type="Texture2D" uid="uid://rokf7e6uxrs6" path="res://Grafiche/Dante/Dante.png" id="4_o0rks"]
@@ -161,10 +161,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Dante" type="CharacterBody2D"]
+[node name="Giocatore" type="CharacterBody2D"]
 texture_filter = 1
 motion_mode = 1
-script = ExtResource("1_ajuo3")
+script = ExtResource("1_ssre8")
 SPEED = 300.0
 metadata/_edit_group_ = true
 
@@ -173,5 +173,6 @@ shape = SubResource("RectangleShape2D_1k0s6")
 
 [node name="DanteAlighieri" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hx0ku")
-animation = &"walk_left"
-frame_progress = 0.33797
+animation = &"walk_up"
+frame = 1
+frame_progress = 0.994185

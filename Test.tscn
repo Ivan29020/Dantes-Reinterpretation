@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=6 format=3 uid="uid://cd0k0e7w7w47y"]
 
 [ext_resource type="Texture2D" uid="uid://c3bh3enp8yxqt" path="res://icon.svg" id="1_6nfvu"]
@@ -5,6 +6,7 @@
 [ext_resource type="Texture2D" path="res://Grafiche/Dante Alighieri Right Side.png" id="3_glq3d"]
 [ext_resource type="Texture2D" path="res://Grafiche/Dante Alighieri.png" id="4_w7dcc"]
 [ext_resource type="Texture2D" path="res://Grafiche/Dante Alighieri Back.png" id="5_ncoff"]
+
 
 [node name="Icon" type="Sprite2D"]
 position = Vector2(439, 319)

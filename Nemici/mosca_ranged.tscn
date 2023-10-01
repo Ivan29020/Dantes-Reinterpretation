@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxclsn11s0rnu"]
+[gd_scene load_steps=9 format=3 uid="uid://dp08rxofkmkal"]
 
 [ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_knkws"]
 [ext_resource type="Script" path="res://Nemici/mosca_ranged.gd" id="2_t5oy4"]
-[ext_resource type="PackedScene" uid="uid://b8ofcqh8e7jph" path="res://Proiettili/spawner_mosca.tscn" id="3_flcoh"]
+[ext_resource type="PackedScene" uid="uid://bqxax1rgig2uc" path="res://Proiettili/spawner_mosca.tscn" id="3_flcoh"]
 [ext_resource type="Texture2D" uid="uid://cxer7kwpj60a7" path="res://Grafiche/nemici/Fly/Fly left idle.png" id="3_k0cet"]
 [ext_resource type="Texture2D" uid="uid://bbksqj44ujm55" path="res://Grafiche/nemici/Fly/Fly left.png" id="4_pwgol"]
 [ext_resource type="Texture2D" uid="uid://bxlujvmjpw5h3" path="res://Grafiche/nemici/Fly/Fly Right idle.png" id="5_bnte1"]

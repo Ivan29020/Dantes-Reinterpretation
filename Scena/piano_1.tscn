@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://Scena/Area2D1.gd" id="2_64pfk"]
 [ext_resource type="PackedScene" uid="uid://cdim5rvmj2t2n" path="res://Giocatore/dante.tscn" id="3_cwr6g"]
 [ext_resource type="PackedScene" uid="uid://c81usjbg52chb" path="res://Sistemi/Killcounter.tscn" id="5_easrx"]
-[ext_resource type="PackedScene" uid="uid://cea7rs6rwuri5" path="res://Nemici/nemico_melee.tscn" id="6_nwqe6"]
+[ext_resource type="PackedScene" uid="uid://cq1ojgt5evbup" path="res://Nemici/nemico_melee.tscn" id="6_nwqe6"]
 [ext_resource type="PackedScene" uid="uid://dcwyiqaqurb7y" path="res://Sistemi/restrizione.tscn" id="6_wl6vh"]
-[ext_resource type="PackedScene" uid="uid://dii73s23akdk8" path="res://Nemici/nemico_ranged.tscn" id="7_8bqs5"]
-[ext_resource type="PackedScene" uid="uid://cxclsn11s0rnu" path="res://Nemici/mosca_ranged.tscn" id="8_bhxh3"]
+[ext_resource type="PackedScene" uid="uid://bf1nylkor0d57" path="res://Nemici/nemico_ranged.tscn" id="7_8bqs5"]
+[ext_resource type="PackedScene" uid="uid://dp08rxofkmkal" path="res://Nemici/mosca_ranged.tscn" id="8_bhxh3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
 radius = 24.0208

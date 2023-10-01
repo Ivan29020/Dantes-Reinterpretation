@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cea7rs6rwuri5"]
+[gd_scene load_steps=12 format=3 uid="uid://cq1ojgt5evbup"]
 
 [ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_c1afv"]
 [ext_resource type="Script" path="res://Nemici/nemico_melee.gd" id="2_dfj71"]
@@ -82,7 +82,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="nemico_base" instance=ExtResource("1_c1afv")]
+[node name="nemico_base2" instance=ExtResource("1_c1afv")]
 script = ExtResource("2_dfj71")
 
 [node name="Sprite2D" parent="." index="0"]

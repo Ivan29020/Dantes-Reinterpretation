@@ -250,3 +250,6 @@ arma = NodePath("../Spawner_proiettili")
 
 [node name="Spawner_proiettili" parent="." instance=ExtResource("26_barov")]
 spawner_giocatore = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 32)

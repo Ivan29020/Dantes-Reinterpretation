@@ -16,7 +16,6 @@ func _physics_process(delta):
 	movement = movement.normalized()
 	
 	
-	
 	update_animation(movement)
 	
 	velocity = movement * vel_attuale

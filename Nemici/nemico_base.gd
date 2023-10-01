@@ -7,6 +7,8 @@ class_name nemico_base extends CharacterBody2D
 @export var punteggio : int = 5
 @export var danni_melee : int = 10
 
+var morte = preload("res://animazione_morte.tscn")
+
 func aggiorna_hp(newhp):
 	
 	hp = newhp
@@ -18,6 +20,9 @@ func aggiorna_hp(newhp):
 func muori():
 	Global.Restrizione.dimensione += regen
 	Global.Killcount.punteggio += punteggio
+	var animorte = morte.instantiate()
+	animorte.global_position = global_position
+	get_tree().get_root().add_child(animorte) 
 	queue_free()
 
 func _process(delta):

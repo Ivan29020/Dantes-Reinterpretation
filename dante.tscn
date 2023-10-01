@@ -24,8 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://bjks1mncxo155" path="res://Grafiche/La Divina Commedia/Libro sinistra .png" id="22_rljou"]
 [ext_resource type="Texture2D" uid="uid://catwq1pod8rnk" path="res://Grafiche/La Divina Commedia/Libro Destra idle.png" id="23_4dkjm"]
 [ext_resource type="Texture2D" uid="uid://dpstmrme3kvr2" path="res://Grafiche/La Divina Commedia/Libro Destra.png" id="24_uxuq4"]
-[ext_resource type="PackedScene" uid="uid://bymv5emaauppd" path="res://input_armi.tscn" id="25_531jl"]
-[ext_resource type="PackedScene" uid="uid://dnwsaeqjmxouh" path="res://spawner_proiettili.tscn" id="26_towar"]
+[ext_resource type="PackedScene" path="res://input_armi.tscn" id="25_531jl"]
+[ext_resource type="PackedScene" path="res://spawner_proiettili.tscn" id="26_towar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1k0s6"]
 size = Vector2(11, 17)

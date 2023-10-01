@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dii73s23akdk8"]
+[gd_scene load_steps=13 format=3 uid="uid://dii73s23akdk8"]
 
 [ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_448lx"]
 [ext_resource type="Script" path="res://Nemici/nemico_ranged.gd" id="2_5gpsq"]
 [ext_resource type="PackedScene" uid="uid://nrgl6p5gc4na" path="res://Proiettili/spawner_occhio.tscn" id="3_nel24"]
 [ext_resource type="Texture2D" uid="uid://duph2bw6m2q18" path="res://Grafiche/nemici/Eye/Eye front.png" id="3_vhre1"]
 [ext_resource type="Texture2D" uid="uid://bcauihp1t8gcj" path="res://Grafiche/nemici/Eye/Eye front idle.png" id="4_0px60"]
-[ext_resource type="PackedScene" uid="uid://cpq2vhfdnkcuw" path="res://Proiettili/proiettile_mosca.tscn" id="4_r710j"]
 [ext_resource type="Texture2D" uid="uid://b44cdyho6c7x3" path="res://Grafiche/nemici/Eye/Eye left.png" id="5_uyo8m"]
 [ext_resource type="Texture2D" uid="uid://01hnh0lso4fc" path="res://Grafiche/nemici/Eye/Eye left idle.png" id="6_mr40n"]
 [ext_resource type="Texture2D" uid="uid://d13lynp6tul0n" path="res://Grafiche/nemici/Eye/Eye right.png" id="7_f7cqq"]
@@ -93,7 +92,6 @@ sprite_frames = SubResource("SpriteFrames_hci6b")
 animation = &"Idle_right"
 
 [node name="Spawner_proiettili" parent="." index="2" instance=ExtResource("3_nel24")]
-proiettile_arma = ExtResource("4_r710j")
 velocita_fuoco = 2.0
 velocita_proiettile = 50
 

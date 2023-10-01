@@ -6,11 +6,6 @@
 
 [node name="nemico_base" instance=ExtResource("1_knkws")]
 script = ExtResource("2_t5oy4")
-vel = null
-maxhp = null
-hp = null
-regen = null
-punteggio = null
 
 [node name="Spawner_proiettili" parent="." index="2" instance=ExtResource("3_flcoh")]
 

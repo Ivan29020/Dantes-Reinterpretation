@@ -12,10 +12,13 @@ func _physics_process(delta):
 	$Sprite2D.rotation = dir.angle()
 
 func _on_body_entered(body):
-	if proiettile_giocatore:
-		body.hp -= danni
-	else:
-		Global.Restrizione.dimensione -= danni
+	if body == Global.Giocatore or body is nemico_base:
+		if proiettile_giocatore:
+			body.hp -= danni
+			queue_free()
+		else:
+			Global.Restrizione.dimensione -= danni
+			queue_free()
 
 func cambia_tipo(tipo):
 	proiettile_giocatore = tipo

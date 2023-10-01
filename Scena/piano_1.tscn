@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn37x3ltlsvbv"]
+[gd_scene load_steps=10 format=3 uid="uid://dn37x3ltlsvbv"]
 
 [ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_5rgdw"]
 [ext_resource type="Script" path="res://Scena/Area2D1.gd" id="2_64pfk"]
 [ext_resource type="PackedScene" uid="uid://cdim5rvmj2t2n" path="res://Giocatore/dante.tscn" id="3_cwr6g"]
-[ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="4_i2rd0"]
 [ext_resource type="PackedScene" uid="uid://c81usjbg52chb" path="res://Sistemi/Killcounter.tscn" id="5_easrx"]
+[ext_resource type="PackedScene" uid="uid://cea7rs6rwuri5" path="res://Nemici/nemico_melee.tscn" id="6_nwqe6"]
 [ext_resource type="PackedScene" uid="uid://dcwyiqaqurb7y" path="res://Sistemi/restrizione.tscn" id="6_wl6vh"]
+[ext_resource type="PackedScene" uid="uid://dii73s23akdk8" path="res://Nemici/nemico_ranged.tscn" id="7_8bqs5"]
+[ext_resource type="PackedScene" uid="uid://cxclsn11s0rnu" path="res://Nemici/mosca_ranged.tscn" id="8_bhxh3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
 radius = 24.0208
@@ -17,7 +19,6 @@ radius = 24.0208
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 32
 script = ExtResource("2_64pfk")
-scena = "res://Scena/piano_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(157, 23)
@@ -25,9 +26,6 @@ shape = SubResource("CircleShape2D_b2fsr")
 
 [node name="Giocatore" parent="." instance=ExtResource("3_cwr6g")]
 position = Vector2(163, 97)
-
-[node name="nemico_base" parent="." instance=ExtResource("4_i2rd0")]
-position = Vector2(70, 107)
 
 [node name="Killcounter" parent="." instance=ExtResource("5_easrx")]
 offset_left = 72.0
@@ -38,7 +36,16 @@ obbiettivo = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Restrizione" parent="." instance=ExtResource("6_wl6vh")]
-position = Vector2(158, 90)
+position = Vector2(153, 88)
+
+[node name="nemico_base" parent="." instance=ExtResource("6_nwqe6")]
+position = Vector2(60, 117)
+
+[node name="nemico_base2" parent="." instance=ExtResource("7_8bqs5")]
+position = Vector2(54, 50)
+
+[node name="nemico_base3" parent="." instance=ExtResource("8_bhxh3")]
+position = Vector2(93, 108)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

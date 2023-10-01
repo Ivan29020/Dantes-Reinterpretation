@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cdim5rvmj2t2n"]
+[gd_scene load_steps=32 format=3 uid="uid://cdim5rvmj2t2n"]
 
 [ext_resource type="Script" path="res://Giocatore/Giocatore.gd" id="1_15kl1"]
 [ext_resource type="Texture2D" uid="uid://rokf7e6uxrs6" path="res://Grafiche/Dante/Dante.png" id="2_4fchy"]
@@ -25,7 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://h85lisxd6p61" path="res://Grafiche/La Divina Commedia/Libro Destra idle.png" id="23_b7ujd"]
 [ext_resource type="Texture2D" uid="uid://cidw63sdev8we" path="res://Grafiche/La Divina Commedia/Libro Destra.png" id="24_1s2xc"]
 [ext_resource type="PackedScene" uid="uid://bymv5emaauppd" path="res://Giocatore/input_armi.tscn" id="25_nnb86"]
-[ext_resource type="PackedScene" uid="uid://dnwsaeqjmxouh" path="res://Proiettili/spawner_proiettili.tscn" id="26_barov"]
+[ext_resource type="PackedScene" uid="uid://ctu6x5kagdceo" path="res://Proiettili/spawner_dante.tscn" id="26_3dv6h"]
+[ext_resource type="PackedScene" uid="uid://btpfx620f00h6" path="res://Proiettili/proietile_dante.tscn" id="27_iykwp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1k0s6"]
 size = Vector2(11, 17)
@@ -223,6 +224,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_040db"]
+size = Vector2(11, 17)
+
 [node name="Giocatore" type="CharacterBody2D"]
 texture_filter = 1
 collision_mask = 16
@@ -245,11 +249,22 @@ animation = &"book_idle_right"
 frame = 1
 frame_progress = 0.393648
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 32)
+
 [node name="Input_armi" parent="." instance=ExtResource("25_nnb86")]
 arma = NodePath("../Spawner_proiettili")
 
-[node name="Spawner_proiettili" parent="." instance=ExtResource("26_barov")]
+[node name="Spawner_proiettili" parent="." instance=ExtResource("26_3dv6h")]
+proiettile_arma = ExtResource("27_iykwp")
 spawner_giocatore = true
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, 32)
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_040db")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

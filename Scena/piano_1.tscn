@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn37x3ltlsvbv"]
+[gd_scene load_steps=6 format=3 uid="uid://dn37x3ltlsvbv"]
 
-[ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://tile_map.tscn" id="1_5rgdw"]
-[ext_resource type="Texture2D" uid="uid://cr73gyuwdekbw" path="res://Grafiche/Dante Alighieri.png" id="1_kcj6e"]
+[ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_5rgdw"]
 [ext_resource type="Script" path="res://Scena/Area2D1.gd" id="2_64pfk"]
-[ext_resource type="Script" path="res://Scena/Dante.gd" id="2_nqj76"]
+[ext_resource type="Script" path="res://Test/Dante.gd" id="3_44bh0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
 radius = 24.0208
@@ -25,10 +24,9 @@ shape = SubResource("CircleShape2D_b2fsr")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(1, 0)
-script = ExtResource("2_nqj76")
+script = ExtResource("3_44bh0")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_kcj6e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -1)

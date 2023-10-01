@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsbjduvexykmn"]
 
 [ext_resource type="Script" path="res://Menu/Menu.gd" id="1_3gehm"]
-[ext_resource type="Texture2D" uid="uid://0yaokghglsym" path="res://img/Background.png" id="2_h0ae6"]
+[ext_resource type="Texture2D" uid="uid://0yaokghglsym" path="res://Grafiche/Background.png" id="2_h0ae6"]
 [ext_resource type="FontFile" uid="uid://dtkns46skkw" path="res://font/LuxuriousRoman-Regular.ttf" id="3_mr5mf"]
 
 [node name="Menu" type="Node2D"]

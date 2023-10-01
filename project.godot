@@ -90,6 +90,15 @@ button2={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Giocatore"
+2d_physics/layer_2="Nemici"
+2d_physics/layer_5="stanze"
+2d_physics/layer_6="interazioni"
+2d_physics/layer_10="Proiettili giocatore"
+2d_physics/layer_11="Proiettili nemici"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bvybju4b7efsr"]
+[gd_scene load_steps=23 format=3 uid="uid://bvybju4b7efsr"]
 
 [ext_resource type="Texture2D" uid="uid://c2n1wh1t35xj7" path="res://Grafiche/Stanze/Muro 1.png" id="1_qqos3"]
 [ext_resource type="Texture2D" uid="uid://b1755nd6h4i6" path="res://Grafiche/Stanze/Ombra.png" id="2_653xi"]
@@ -11,8 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cj7wh1spyc61" path="res://Grafiche/Stanze/Muro lato sinistro.png" id="9_rxbq4"]
 [ext_resource type="Texture2D" uid="uid://d1uaivvn3njep" path="res://Grafiche/Stanze/Porta.png" id="10_twfrm"]
 [ext_resource type="Texture2D" uid="uid://beos3toc4ngib" path="res://Grafiche/Stanze/Porta muro pavimento.png" id="11_158lv"]
-[ext_resource type="PackedScene" uid="uid://c81usjbg52chb" path="res://Sistemi/Killcounter.tscn" id="12_8i20f"]
-[ext_resource type="PackedScene" uid="uid://dcwyiqaqurb7y" path="res://Sistemi/restrizione.tscn" id="13_kyb7u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2qsvd"]
 texture = ExtResource("1_qqos3")
@@ -99,11 +97,6 @@ layer_0/tile_data = PackedInt32Array(0, 5, 0, 1, 65536, 0, 2, 0, 0, 3, 65536, 0,
 [node name="PortaMuroPavimento" type="Sprite2D" parent="."]
 position = Vector2(157, 16)
 texture = ExtResource("11_158lv")
-
-[node name="Killcounter" parent="." instance=ExtResource("12_8i20f")]
-
-[node name="Restrizione" parent="." instance=ExtResource("13_kyb7u")]
-position = Vector2(165, 87)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(161, 91)

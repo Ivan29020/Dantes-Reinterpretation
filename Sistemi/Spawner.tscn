@@ -59,7 +59,7 @@ _data = {
 "fade": SubResource("Animation_b6w3l")
 }
 
-[node name="Spawner" type="AnimatedSprite2D"]
+[node name="Spawner" type="AnimatedSprite2D" groups=["spawner"]]
 modulate = Color(1, 1, 1, 0)
 sprite_frames = SubResource("SpriteFrames_0jq50")
 frame = 3

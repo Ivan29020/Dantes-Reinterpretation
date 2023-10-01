@@ -13,6 +13,8 @@ func cambia_dimensione(dim : int):
 	dimensione = dim
 	if dimensione >= max_dimensione:
 		dimensione = max_dimensione
+	if dimensione < 0:
+		dimensione = 0
 	$CollisionShape2D.shape.radius = dimensione 
 	$PointLight2D.texture_scale = dimensione/50.0
 	hard_mode_threshold.emit(dimensione < max_dimensione * PERCENTUALE_MODALITA_HARD)

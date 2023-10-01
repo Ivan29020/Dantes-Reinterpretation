@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://kcwadnou0aeo"]
+
+[ext_resource type="Script" path="res://Sistemi/Spawn.gd" id="1_ednjb"]
+[ext_resource type="Texture2D" uid="uid://4xhyjgdpu8mo" path="res://Grafiche/Spawn/Spawn 1.png" id="2_s0ufj"]
+[ext_resource type="Texture2D" uid="uid://cekrv4qyfmkcf" path="res://Grafiche/Spawn/Spawn 2.png" id="3_eld2l"]
+[ext_resource type="Texture2D" uid="uid://cmtsgfbfsc8o7" path="res://Grafiche/Spawn/Spawn 3.png" id="4_an2dk"]
+[ext_resource type="Texture2D" uid="uid://cjjyossemc7a3" path="res://Grafiche/Spawn/Spawn 4.png" id="5_rrl2e"]
+[ext_resource type="Texture2D" uid="uid://cdxyc5gj3b8i7" path="res://Grafiche/Spawn/Spawn 5.png" id="6_j6ko5"]
+[ext_resource type="Texture2D" uid="uid://bhfj4ui56hlbw" path="res://Grafiche/Spawn/Spawn 6.png" id="7_awrqa"]
+[ext_resource type="Texture2D" uid="uid://oyt5o32gwloi" path="res://Grafiche/Spawn/Spawn 7.png" id="8_7i2rf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0jq50"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_s0ufj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eld2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_an2dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rrl2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j6ko5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_awrqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7i2rf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_b6w3l"]
+resource_name = "new_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4snk3"]
+_data = {
+"fade": SubResource("Animation_b6w3l")
+}
+
+[node name="Spawner" type="AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0)
+sprite_frames = SubResource("SpriteFrames_0jq50")
+frame = 3
+frame_progress = 0.65011
+speed_scale = 0.2
+script = ExtResource("1_ednjb")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4snk3")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

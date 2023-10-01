@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ofcqh8e7jph"]
+
+[ext_resource type="PackedScene" uid="uid://dnwsaeqjmxouh" path="res://Proiettili/spawner_proiettili.tscn" id="1_8r4ww"]
+[ext_resource type="Script" path="res://Proiettili/spawner_mosca.gd" id="2_4onjh"]
+
+[node name="Spawner_proiettili" instance=ExtResource("1_8r4ww")]
+script = ExtResource("2_4onjh")
+proiettile_arma = null

@@ -26,7 +26,7 @@ position = Vector2(-3, 0)
 color = Color(0.960784, 0.478431, 0.486275, 1)
 energy = 0.4
 texture = ExtResource("2_tcv8d")
-texture_scale = 8.0
+texture_scale = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

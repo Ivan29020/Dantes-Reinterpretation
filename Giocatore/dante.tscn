@@ -249,3 +249,4 @@ frame_progress = 0.393648
 arma = NodePath("../Spawner_proiettili")
 
 [node name="Spawner_proiettili" parent="." instance=ExtResource("26_barov")]
+spawner_giocatore = true

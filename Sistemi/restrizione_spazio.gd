@@ -2,7 +2,7 @@ extends Area2D
 
 var max_dimensione : int = 100
 var dimensione : int = 100 : set = cambia_dimensione;
-var velocita_restrizione : float = 0.5
+var velocita_restrizione : float = 1
 
 const PERCENTUALE_MODALITA_HARD = 0.35
 const PERCENTUALE_MORTE = 0.05
@@ -10,9 +10,11 @@ const PERCENTUALE_MORTE = 0.05
 signal hard_mode_threshold(is_hard_mode : bool)
 
 func cambia_dimensione(dim : int): 
-	dimensione += dim
+	dimensione = dim
+	if dimensione >= max_dimensione:
+		dimensione = max_dimensione
 	$CollisionShape2D.shape.radius = dimensione 
-	$PointLight2D.texture_scale = dimensione/50
+	$PointLight2D.texture_scale = dimensione/50.0
 	hard_mode_threshold.emit(dimensione < max_dimensione * PERCENTUALE_MODALITA_HARD)
 	if dimensione < max_dimensione * PERCENTUALE_MODALITA_HARD:
 		$PointLight2D.color = Color(0.96,1.0,0.66,1)
@@ -20,7 +22,7 @@ func cambia_dimensione(dim : int):
 		$PointLight2D.color = Color(0.96,0.47,0.48,1)
 
 func _on_restriction_tick_timeout():
-	cambia_dimensione(-velocita_restrizione)
+	dimensione -= velocita_restrizione
 
 
 func _on_body_exited(body):

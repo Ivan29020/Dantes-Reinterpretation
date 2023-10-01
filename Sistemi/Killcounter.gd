@@ -1,7 +1,7 @@
 extends Control
 
 var punteggio : int = 0 : set = aggiorna_punteggio
-var obbiettivo : int = 10 : set = aggiorna_obbiettivo
+var obbiettivo : int = 50 : set = aggiorna_obbiettivo
 
 signal obbiettivo_raggiunto(raggiunto : bool)
 

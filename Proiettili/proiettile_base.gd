@@ -15,7 +15,7 @@ func _on_body_entered(body):
 	if proiettile_giocatore:
 		body.hp -= danni
 	else:
-		pass #aggiungere codice per diminure dimensione qualora il giocatore viene colpito
+		Global.Restrizione.dimensione -= danni
 
 func cambia_tipo(tipo):
 	proiettile_giocatore = tipo

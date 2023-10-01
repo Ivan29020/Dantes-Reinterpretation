@@ -1,20 +1,22 @@
 extends CharacterBody2D
 
-var vel : int = 200
-var maxhp : int = 100
-var hp : int = 100 : set = aggiorna_hp
-var punteggio : int = 10 #quantita di spazio rigenerato quando uccidi il nemico
+@export var vel : int = 50
+@export var maxhp : int = 30
+@export var hp : int = 30 : set = aggiorna_hp
+@export var regen : int = 10 #quantita di spazio rigenerato quando uccidi il nemico
+@export var punteggio : int = 5
 
 func aggiorna_hp(newhp):
 	
-	hp += newhp
-	if hp > maxhp:
+	hp = newhp
+	if hp >= maxhp:
 		hp = maxhp
 	if hp <= 0:
 		muori()
 
 func muori():
-	#aggiungere codice per incrementare dimensione
+	Global.Restrizione.dimensione += regen
+	Global.Killcount.punteggio += punteggio
 	queue_free()
 
 func _process(delta):
@@ -28,9 +30,7 @@ func _process(delta):
 
 func move_ai():
 	
-	var dir : Vector2 = Vector2.ZERO
+	var dir : Vector2 = (Global.Giocatore.global_position - global_position).normalized()
 	
-	#prendere la posizione del giocatore una volta che diventa globale
-	dir = (global_position - Vector2.ZERO).normalized() #Temporaneo
 	
 	return dir

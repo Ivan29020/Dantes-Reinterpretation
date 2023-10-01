@@ -52,3 +52,7 @@ func update_animation(movement):
 	else :
 		$DanteAlighieri.play("Idle_" + get_direction_as_string())
 		
+
+func _on_hitbox_body_entered(body):
+	if body is nemico_base:
+		Global.Restrizione.dimensione -= body.danni_melee

@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name nemico_base extends CharacterBody2D
 
 @export var vel : int = 50
 @export var maxhp : int = 30

@@ -21,3 +21,4 @@ func get_direction_as_string():
 
 func update_animation(dir): 
 	$Sprite2D.play("Idle_" + get_direction_as_string())
+

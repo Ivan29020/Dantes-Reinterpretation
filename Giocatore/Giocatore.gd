@@ -53,6 +53,5 @@ func update_animation(movement):
 		
 
 func _on_hitbox_body_entered(body):
-	print("hello")
 	if body is nemico_base:
 		Global.Restrizione.dimensione -= body.danni_melee

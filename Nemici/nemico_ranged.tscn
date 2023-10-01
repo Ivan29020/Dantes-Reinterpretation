@@ -1,12 +1,96 @@
-[gd_scene load_steps=5 format=3 uid="uid://dii73s23akdk8"]
+[gd_scene load_steps=14 format=3 uid="uid://dii73s23akdk8"]
 
 [ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_448lx"]
 [ext_resource type="Script" path="res://Nemici/nemico_ranged.gd" id="2_5gpsq"]
 [ext_resource type="PackedScene" uid="uid://nrgl6p5gc4na" path="res://Proiettili/spawner_occhio.tscn" id="3_nel24"]
+[ext_resource type="Texture2D" uid="uid://duph2bw6m2q18" path="res://Grafiche/nemici/Eye/Eye front.png" id="3_vhre1"]
+[ext_resource type="Texture2D" uid="uid://bcauihp1t8gcj" path="res://Grafiche/nemici/Eye/Eye front idle.png" id="4_0px60"]
 [ext_resource type="PackedScene" uid="uid://cpq2vhfdnkcuw" path="res://Proiettili/proiettile_mosca.tscn" id="4_r710j"]
+[ext_resource type="Texture2D" uid="uid://b44cdyho6c7x3" path="res://Grafiche/nemici/Eye/Eye left.png" id="5_uyo8m"]
+[ext_resource type="Texture2D" uid="uid://01hnh0lso4fc" path="res://Grafiche/nemici/Eye/Eye left idle.png" id="6_mr40n"]
+[ext_resource type="Texture2D" uid="uid://d13lynp6tul0n" path="res://Grafiche/nemici/Eye/Eye right.png" id="7_f7cqq"]
+[ext_resource type="Texture2D" uid="uid://nbm0r2hhi4sg" path="res://Grafiche/nemici/Eye/Eye right idle.png" id="8_n087g"]
+[ext_resource type="Texture2D" uid="uid://bi4i7vj5jt2ht" path="res://Grafiche/nemici/Eye/Eye Back.png" id="9_k8tfc"]
+[ext_resource type="Texture2D" uid="uid://bkn8pxvcw7hkm" path="res://Grafiche/nemici/Eye/Eye Back idle.png" id="10_f15nc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hci6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vhre1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0px60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0px60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vhre1")
+}],
+"loop": true,
+"name": &"Idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uyo8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mr40n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mr40n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uyo8m")
+}],
+"loop": true,
+"name": &"Idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_f7cqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n087g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n087g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f7cqq")
+}],
+"loop": true,
+"name": &"Idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_k8tfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f15nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f15nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k8tfc")
+}],
+"loop": true,
+"name": &"Idle_up",
+"speed": 5.0
+}]
 
 [node name="nemico_base" instance=ExtResource("1_448lx")]
 script = ExtResource("2_5gpsq")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_hci6b")
+animation = &"Idle_right"
 
 [node name="Spawner_proiettili" parent="." index="2" instance=ExtResource("3_nel24")]
 proiettile_arma = ExtResource("4_r710j")

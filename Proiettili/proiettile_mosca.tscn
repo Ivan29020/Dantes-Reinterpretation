@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpq2vhfdnkcuw"]
+
+[ext_resource type="PackedScene" uid="uid://d2rhx1j06u1cc" path="res://Proiettili/proiettile_base.tscn" id="1_m05j8"]
+
+[node name="Proiettile_base" instance=ExtResource("1_m05j8")]

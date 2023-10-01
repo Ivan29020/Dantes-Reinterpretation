@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dii73s23akdk8"]
+[gd_scene load_steps=5 format=3 uid="uid://dii73s23akdk8"]
 
 [ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_448lx"]
 [ext_resource type="Script" path="res://Nemici/nemico_ranged.gd" id="2_5gpsq"]
 [ext_resource type="PackedScene" uid="uid://nrgl6p5gc4na" path="res://Proiettili/spawner_occhio.tscn" id="3_nel24"]
+[ext_resource type="PackedScene" uid="uid://cpq2vhfdnkcuw" path="res://Proiettili/proiettile_mosca.tscn" id="4_r710j"]
 
 [node name="nemico_base" instance=ExtResource("1_448lx")]
 script = ExtResource("2_5gpsq")
 
 [node name="Spawner_proiettili" parent="." index="2" instance=ExtResource("3_nel24")]
+proiettile_arma = ExtResource("4_r710j")
+velocita_fuoco = 2.0
+velocita_proiettile = 50
 
 [node name="Timer" type="Timer" parent="." index="3"]
 autostart = true

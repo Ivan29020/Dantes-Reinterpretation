@@ -32,5 +32,4 @@ func move_ai():
 	
 	var dir : Vector2 = (Global.Giocatore.global_position - global_position).normalized()
 	
-	
 	return dir

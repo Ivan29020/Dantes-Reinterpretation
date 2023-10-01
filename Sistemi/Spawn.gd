@@ -14,9 +14,10 @@ var nemico
 
 func _ready():
 	$Timer.wait_time = time
-	$Timer.start()
-	if hard_mode:
-		add_to_group("hardmode")
+	if !hard_mode:
+		$Timer.start()
+		return
+	add_to_group("hardmode")
 
 func crea_nemico():
 	var nnem = load(diz_nemici[id])

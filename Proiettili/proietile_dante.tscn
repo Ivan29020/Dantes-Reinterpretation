@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://btpfx620f00h6"]
+[gd_scene load_steps=4 format=3 uid="uid://btpfx620f00h6"]
 
 [ext_resource type="PackedScene" uid="uid://d2rhx1j06u1cc" path="res://Proiettili/proiettile_base.tscn" id="1_101a3"]
 [ext_resource type="Script" path="res://Proiettili/Proiettile_dante.gd" id="2_1kaxk"]
+[ext_resource type="Texture2D" uid="uid://ekxni5mp1486" path="res://Grafiche/Proiettili/Proiettile Dante/Dante Projectile.png" id="3_bnuxw"]
 
 [node name="Proiettile_base" instance=ExtResource("1_101a3")]
 script = ExtResource("2_1kaxk")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_bnuxw")

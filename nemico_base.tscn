@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf8sxoekehwb6"]
+
+[ext_resource type="Script" path="res://nemico_base.gd" id="1_kq4u6"]
+[ext_resource type="Texture2D" uid="uid://c3bh3enp8yxqt" path="res://icon.svg" id="2_wm5ls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1jhs"]
+
+[node name="nemico_base" type="CharacterBody2D"]
+script = ExtResource("1_kq4u6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_wm5ls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k1jhs")

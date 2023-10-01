@@ -18,7 +18,7 @@ func _physics_process(delta):
 	
 	update_animation(movement)
 	
-	velocity = movement * vel_attuale
+	velocity = movement * vel_attuale * delta
 	move_and_slide()
 
 

@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmhrf4osns7em"]
+[gd_scene load_steps=3 format=3 uid="uid://bmhrf4osns7em"]
 
-[ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://tile_map.tscn" id="1_jxg6y"]
+[ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_jxg6y"]
+[ext_resource type="PackedScene" uid="uid://cdim5rvmj2t2n" path="res://Giocatore/dante.tscn" id="2_qgci3"]
 
 [node name="piano 2" type="Node2D"]
+metadata/_edit_vertical_guides_ = []
 
 [node name="TileMap" parent="." instance=ExtResource("1_jxg6y")]
+
+[node name="Giocatore" parent="." instance=ExtResource("2_qgci3")]
+position = Vector2(151, 81)

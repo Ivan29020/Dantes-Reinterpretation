@@ -1,0 +1,252 @@
+[gd_scene load_steps=30 format=3 uid="uid://cdim5rvmj2t2n"]
+
+[ext_resource type="Script" path="res://Giocatore/Giocatore.gd" id="1_15kl1"]
+[ext_resource type="Texture2D" uid="uid://rokf7e6uxrs6" path="res://Grafiche/Dante/Dante.png" id="2_4fchy"]
+[ext_resource type="Texture2D" uid="uid://ssdq6yetv3ku" path="res://Grafiche/Dante/Dante idle front.png" id="3_tk1me"]
+[ext_resource type="Texture2D" uid="uid://b7wphc4a400o7" path="res://Grafiche/Dante/Dante Alighieri Left Side.png" id="4_o5t8r"]
+[ext_resource type="Texture2D" uid="uid://bslghcu6bitlw" path="res://Grafiche/Dante/Dante Left Idle.png" id="5_5eibk"]
+[ext_resource type="Texture2D" uid="uid://d0qjnqwymd736" path="res://Grafiche/Dante/Dante Alighieri Right Side.png" id="6_uaijh"]
+[ext_resource type="Texture2D" uid="uid://drsn6b1ffjxng" path="res://Grafiche/Dante/Dante Righr Idle.png" id="7_witre"]
+[ext_resource type="Texture2D" uid="uid://oblwe6egb2r3" path="res://Grafiche/Dante/Dante Alighieri Back.png" id="8_mxb52"]
+[ext_resource type="Texture2D" uid="uid://f74o62bjntum" path="res://Grafiche/Dante/Dante Back idle.png" id="9_ymb24"]
+[ext_resource type="Texture2D" uid="uid://cpui3oacil008" path="res://Grafiche/Dante/Dante front mov 1.png" id="10_pyx23"]
+[ext_resource type="Texture2D" uid="uid://c5q7cqjvybl7q" path="res://Grafiche/Dante/Dante front mov 2.png" id="11_nft0r"]
+[ext_resource type="Texture2D" uid="uid://w12kocu0u4fy" path="res://Grafiche/Dante/Dante/Dante Left.png" id="12_1ifgu"]
+[ext_resource type="Texture2D" uid="uid://o4fp4kf1vcw1" path="res://Grafiche/Dante/Dante/Dante Sinistra mov 1.png" id="13_aku1d"]
+[ext_resource type="Texture2D" uid="uid://dfw7u7f8r7ppj" path="res://Grafiche/Dante/Dante/Dante Sinistra mov 2.png" id="14_vvutq"]
+[ext_resource type="Texture2D" uid="uid://bdm8gsoo8xmli" path="res://Grafiche/Dante/Dante Destra mov 1.png" id="15_mjxu4"]
+[ext_resource type="Texture2D" uid="uid://nyt4uiy77hw" path="res://Grafiche/Dante/Dante Destra mov 2.png" id="16_7l44x"]
+[ext_resource type="Texture2D" uid="uid://cq1a1hl5augii" path="res://Grafiche/Dante/Dante Back mov 1.png" id="17_5ev7a"]
+[ext_resource type="Texture2D" uid="uid://dfrbw2fpywu8a" path="res://Grafiche/Dante/Dante Back mov 2.png" id="18_gdh7g"]
+[ext_resource type="Texture2D" uid="uid://cfa1lynpfa81m" path="res://Grafiche/La Divina Commedia/Libro normale idle.png" id="19_x1s2i"]
+[ext_resource type="Texture2D" uid="uid://dxtojdw10gpfh" path="res://Grafiche/La Divina Commedia/Libro.png" id="20_l4nk5"]
+[ext_resource type="Texture2D" uid="uid://cdxg466ids7uh" path="res://Grafiche/La Divina Commedia/Libro sinistra idle.png" id="21_fi81e"]
+[ext_resource type="Texture2D" uid="uid://deo5skit32usu" path="res://Grafiche/La Divina Commedia/Libro sinistra .png" id="22_nnt6f"]
+[ext_resource type="Texture2D" uid="uid://h85lisxd6p61" path="res://Grafiche/La Divina Commedia/Libro Destra idle.png" id="23_b7ujd"]
+[ext_resource type="Texture2D" uid="uid://cidw63sdev8we" path="res://Grafiche/La Divina Commedia/Libro Destra.png" id="24_1s2xc"]
+[ext_resource type="PackedScene" uid="uid://bymv5emaauppd" path="res://Giocatore/input_armi.tscn" id="25_nnb86"]
+[ext_resource type="PackedScene" uid="uid://dnwsaeqjmxouh" path="res://Proiettili/spawner_proiettili.tscn" id="26_barov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1k0s6"]
+size = Vector2(11, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hx0ku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4fchy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tk1me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tk1me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4fchy")
+}],
+"loop": true,
+"name": &"Idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_o5t8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5eibk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5eibk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o5t8r")
+}],
+"loop": true,
+"name": &"Idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_uaijh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_witre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_witre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uaijh")
+}],
+"loop": true,
+"name": &"Idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_mxb52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ymb24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ymb24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mxb52")
+}],
+"loop": true,
+"name": &"Idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4fchy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pyx23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4fchy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nft0r")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_1ifgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aku1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1ifgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vvutq")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_uaijh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mjxu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uaijh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7l44x")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_mxb52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5ev7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mxb52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gdh7g")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2nkl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_x1s2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_l4nk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x1s2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_l4nk5")
+}],
+"loop": true,
+"name": &"book_idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_fi81e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nnt6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fi81e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nnt6f")
+}],
+"loop": true,
+"name": &"book_idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_b7ujd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1s2xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_b7ujd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1s2xc")
+}],
+"loop": true,
+"name": &"book_idle_right",
+"speed": 5.0
+}]
+
+[node name="Giocatore" type="CharacterBody2D"]
+texture_filter = 1
+collision_mask = 16
+motion_mode = 1
+script = ExtResource("1_15kl1")
+SPEED = 300.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1k0s6")
+
+[node name="DanteAlighieri" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hx0ku")
+animation = &"Idle_down"
+
+[node name="Libro" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_g2nkl")
+animation = &"book_idle_right"
+frame = 1
+frame_progress = 0.393648
+
+[node name="Input_armi" parent="." instance=ExtResource("25_nnb86")]
+arma = NodePath("../Spawner_proiettili")
+
+[node name="Spawner_proiettili" parent="." instance=ExtResource("26_barov")]
+spawner_giocatore = true

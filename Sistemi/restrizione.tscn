@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcwyiqaqurb7y"]
+
+[ext_resource type="Script" path="res://Sistemi/restrizione_spazio.gd" id="1_tsfft"]
+[ext_resource type="Texture2D" uid="uid://gl8rtvheckpa" path="res://Grafiche/circle.png" id="2_tcv8d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s31gh"]
+radius = 100.0
+
+[node name="Restrizione" type="Area2D"]
+z_index = 1
+collision_layer = 0
+script = ExtResource("1_tsfft")
+
+[node name="restriction_tick" type="Timer" parent="."]
+autostart = true
+
+[node name="timer_morte" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s31gh")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-3, 0)
+color = Color(0.960784, 0.478431, 0.486275, 1)
+energy = 0.4
+texture = ExtResource("2_tcv8d")
+texture_scale = 2.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="restriction_tick" to="." method="_on_restriction_tick_timeout"]
+[connection signal="timeout" from="timer_morte" to="." method="_on_timer_morte_timeout"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnwsaeqjmxouh"]
+
+[ext_resource type="Script" path="res://Proiettili/Spawner_proiettili.gd" id="1_444jm"]
+[ext_resource type="PackedScene" uid="uid://d2rhx1j06u1cc" path="res://Proiettili/proiettile_base.tscn" id="2_hbkfp"]
+
+[node name="Spawner_proiettili" type="Node2D"]
+script = ExtResource("1_444jm")
+proiettile_arma = ExtResource("2_hbkfp")
+
+[node name="velocitafuoco" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="ready" from="velocitafuoco" to="." method="_on_velocitafuoco_ready"]

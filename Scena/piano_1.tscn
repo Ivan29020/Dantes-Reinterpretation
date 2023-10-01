@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn37x3ltlsvbv"]
+[gd_scene load_steps=6 format=3 uid="uid://dn37x3ltlsvbv"]
 
 [ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_5rgdw"]
 [ext_resource type="Script" path="res://Scena/Area2D1.gd" id="2_64pfk"]
 [ext_resource type="PackedScene" uid="uid://cdim5rvmj2t2n" path="res://Giocatore/dante.tscn" id="3_cwr6g"]
 [ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="4_i2rd0"]
-[ext_resource type="PackedScene" uid="uid://kcwadnou0aeo" path="res://Sistemi/Spawner.tscn" id="5_x42e7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
 radius = 24.0208
@@ -26,9 +25,6 @@ position = Vector2(163, 97)
 
 [node name="nemico_base" parent="." instance=ExtResource("4_i2rd0")]
 position = Vector2(70, 107)
-
-[node name="Spawner" parent="." instance=ExtResource("5_x42e7")]
-position = Vector2(56, 52)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

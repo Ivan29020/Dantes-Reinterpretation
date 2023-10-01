@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsbjduvexykmn"]
+[gd_scene load_steps=8 format=3 uid="uid://dsbjduvexykmn"]
 
 [ext_resource type="Script" path="res://Menu/Menucode.gd" id="1_76ppg"]
 [ext_resource type="Texture2D" uid="uid://0yaokghglsym" path="res://Grafiche/Background.png" id="2_h0ae6"]
 [ext_resource type="FontFile" uid="uid://dtkns46skkw" path="res://Grafiche/font/LuxuriousRoman-Regular.ttf" id="3_mr5mf"]
+[ext_resource type="AudioStream" uid="uid://bnon7wrjmawo0" path="res://Grafiche/Songs/ost_1 (1).mp3" id="4_dgydc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpp87"]
 
@@ -87,6 +88,10 @@ theme_override_fonts/font = ExtResource("3_mr5mf")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/pressed = SubResource("StyleBoxFlat_25hkm")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dgydc")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Opzioni" to="." method="_on_opzioni_pressed"]

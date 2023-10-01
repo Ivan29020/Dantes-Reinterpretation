@@ -5,9 +5,6 @@ var obbiettivo : int = 10 : set = aggiorna_obbiettivo
 
 signal obbiettivo_raggiunto(raggiunto : bool)
 
-func _ready():
-	$Label.text = "Enemies to kill: " + str(punteggio) + "/" + str(obbiettivo)
-
 func aggiorna_punteggio(nuovo):
 	punteggio += nuovo
 	$Label.text = "Enemies to kill: " + str(punteggio) + "/" + str(obbiettivo)

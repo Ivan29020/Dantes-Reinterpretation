@@ -1,36 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn37x3ltlsvbv"]
+[gd_scene load_steps=5 format=3 uid="uid://dn37x3ltlsvbv"]
 
 [ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_5rgdw"]
 [ext_resource type="Script" path="res://Scena/Area2D1.gd" id="2_64pfk"]
-[ext_resource type="Script" path="res://Test/Dante.gd" id="3_44bh0"]
+[ext_resource type="PackedScene" uid="uid://cdim5rvmj2t2n" path="res://Giocatore/dante.tscn" id="3_cwr6g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
 radius = 24.0208
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a8v7o"]
-radius = 6.0
-height = 20.0
 
 [node name="Piano 1" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_5rgdw")]
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
 script = ExtResource("2_64pfk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(157, 23)
 shape = SubResource("CircleShape2D_b2fsr")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(1, 0)
-script = ExtResource("3_44bh0")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -1)
-shape = SubResource("CapsuleShape2D_a8v7o")
+[node name="Giocatore" parent="." instance=ExtResource("3_cwr6g")]
+position = Vector2(163, 97)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

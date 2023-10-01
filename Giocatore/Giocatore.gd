@@ -8,13 +8,12 @@ const RALLENTAMENTO = 0.5
 #Movimento giocatore
 func _physics_process(delta):
 	var vel_attuale = SPEED
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("button2"):
 		vel_attuale = SPEED * RALLENTAMENTO	
 	var movement = Vector2()
-	movement.x = Input.get_axis("ui_left","ui_right")
-	movement.y = Input.get_axis("ui_up","ui_down")
+	movement.x = Input.get_axis("button_left","button_right")
+	movement.y = Input.get_axis("button_up","button_down")
 	movement = movement.normalized()
-	
 	
 	update_animation(movement)
 	

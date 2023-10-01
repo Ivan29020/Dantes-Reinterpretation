@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://gl8rtvheckpa" path="res://Grafiche/circle.png" id="2_tcv8d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s31gh"]
-radius = 400.0
+radius = 100.0
 
-[node name="Area2D" type="Area2D"]
+[node name="Restrizione" type="Area2D"]
+z_index = 1
 collision_layer = 0
 script = ExtResource("1_tsfft")
 
@@ -29,4 +30,5 @@ texture_scale = 8.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="restriction_tick" to="." method="_on_restriction_tick_timeout"]
 [connection signal="timeout" from="timer_morte" to="." method="_on_timer_morte_timeout"]

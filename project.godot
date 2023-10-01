@@ -53,9 +53,9 @@ ui_down={
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/stretch/mode="canvas_items"
 
 
 [rendering]

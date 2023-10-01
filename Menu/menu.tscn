@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsbjduvexykmn"]
+[gd_scene load_steps=7 format=3 uid="uid://dsbjduvexykmn"]
 
 [ext_resource type="Script" path="res://Menu/Menucode.gd" id="1_76ppg"]
 [ext_resource type="Texture2D" uid="uid://0yaokghglsym" path="res://Grafiche/Background.png" id="2_h0ae6"]
 [ext_resource type="FontFile" uid="uid://dtkns46skkw" path="res://Grafiche/font/LuxuriousRoman-Regular.ttf" id="3_mr5mf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpp87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8wg1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25hkm"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -20,10 +26,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -540.0
-offset_right = 960.0
-offset_bottom = 540.0
+offset_left = -997.0
+offset_top = -525.0
+offset_right = 923.0
+offset_bottom = 555.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_h0ae6")
@@ -33,9 +39,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -125.0
-offset_right = 125.0
-offset_bottom = 100.0
+offset_left = -116.0
+offset_top = 202.0
+offset_right = 134.0
+offset_bottom = 302.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_mr5mf")
 theme_override_font_sizes/font_size = 30
@@ -64,13 +71,23 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_mr5mf")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kpp87")
 text = "Start"
+
+[node name="Opzioni" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mr5mf")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v8wg1")
+text = "Options"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_mr5mf")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_25hkm")
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Opzioni" to="." method="_on_opzioni_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

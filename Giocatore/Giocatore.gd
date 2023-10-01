@@ -31,7 +31,6 @@ func get_direction_as_string():
 	if dir.y < 0 :
 		return "up"
 	
-
 #Funzione per Animazioni in movimento	
 func update_animation(movement): 
 	if movement != Vector2.ZERO :
@@ -54,5 +53,6 @@ func update_animation(movement):
 		
 
 func _on_hitbox_body_entered(body):
+	print("hello")
 	if body is nemico_base:
 		Global.Restrizione.dimensione -= body.danni_melee

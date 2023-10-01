@@ -41,7 +41,7 @@ position = Vector2(153, 88)
 position = Vector2(60, 117)
 
 [node name="nemico_base2" parent="." instance=ExtResource("7_8bqs5")]
-position = Vector2(47, 41)
+position = Vector2(54, 50)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

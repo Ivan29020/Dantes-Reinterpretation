@@ -5,6 +5,7 @@ class_name nemico_base extends CharacterBody2D
 @export var hp : int = 30 : set = aggiorna_hp
 @export var regen : int = 10 #quantita di spazio rigenerato quando uccidi il nemico
 @export var punteggio : int = 5
+@export var danni_melee : int = 10
 
 func aggiorna_hp(newhp):
 	

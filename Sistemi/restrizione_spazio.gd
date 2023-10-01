@@ -18,7 +18,7 @@ func cambia_dimensione(dim : int):
 	$CollisionShape2D.shape.radius = dimensione 
 	$PointLight2D.texture_scale = dimensione/50.0
 	hard_mode_threshold.emit(dimensione < max_dimensione * PERCENTUALE_MODALITA_HARD)
-	if dimensione < max_dimensione * PERCENTUALE_MODALITA_HARD:
+	if dimensione > max_dimensione * PERCENTUALE_MODALITA_HARD:
 		$PointLight2D.color = Color(0.96,1.0,0.66,1)
 	else:
 		$PointLight2D.color = Color(0.96,0.47,0.48,1)

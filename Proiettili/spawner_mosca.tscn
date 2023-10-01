@@ -6,4 +6,16 @@
 
 [node name="Spawner_proiettili" instance=ExtResource("1_8r4ww")]
 script = ExtResource("2_4onjh")
+amount = 10
+spacing = 0.2
 proiettile_arma = ExtResource("3_wego4")
+velocita_fuoco = 5.0
+
+[node name="velocitafuoco" parent="." index="0"]
+wait_time = 4.0
+
+[node name="Spacing" type="Timer" parent="." index="1"]
+wait_time = 0.2
+
+[connection signal="ready" from="Spacing" to="." method="_on_spacing_ready"]
+[connection signal="timeout" from="Spacing" to="." method="_on_spacing_timeout"]

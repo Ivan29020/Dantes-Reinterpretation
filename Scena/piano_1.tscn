@@ -49,5 +49,6 @@ hard_mode = true
 position = Vector2(300, 201)
 max_dimensione = 200
 dimensione = 200
+velocita_restrizione = 3.0
 
 [node name="CanvasModulate" parent="." instance=ExtResource("10_8cfxv")]

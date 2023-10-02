@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 @export var SPEED = 2000.0
-const RALLENTAMENTO = 0.5
+const RALLENTAMENTO = 0.40
 
 
 #Movimento giocatore

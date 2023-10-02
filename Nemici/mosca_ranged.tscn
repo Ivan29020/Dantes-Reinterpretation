@@ -47,6 +47,11 @@ animations = [{
 
 [node name="nemico_base" instance=ExtResource("1_knkws")]
 script = ExtResource("2_t5oy4")
+maxhp = 40
+hp = 40
+regen = 15
+punteggio = 10
+danni_melee = 5
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1, 1)
@@ -54,6 +59,9 @@ sprite_frames = SubResource("SpriteFrames_5vh0w")
 animation = &"Idle_right"
 
 [node name="Spawner_proiettili" parent="." index="2" instance=ExtResource("3_flcoh")]
+spacing = 0.45
+velocita_fuoco = 2.5
+velocita_proiettile = 65
 
 [node name="Timer" type="Timer" parent="." index="3"]
 wait_time = 2.0

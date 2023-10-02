@@ -5,17 +5,17 @@ const DEFAULT_ATKSPEED = 1
 const DEFAULT_DEFENCE = 200
 const DEFAULT_SPEED = 175
 
-var damage : int = DEFAULT_DAMAGE
+var damage : float = DEFAULT_DAMAGE
 var attack_speed : float = DEFAULT_ATKSPEED
-var defence : int = DEFAULT_DEFENCE
-var speed : int = DEFAULT_SPEED
+var defence : float = DEFAULT_DEFENCE
+var speed : float = DEFAULT_SPEED
 
 
 func set_stats():
-	Global.Giocatore.get_node("Spawner_proiettili").danno_proiettile = damage
+	Global.Giocatore.get_node("Spawner_proiettili").danno_proiettile = int(damage)
 	Global.Giocatore.get_node("Spawner_proiettili").velocita_fuoco = attack_speed
-	Global.Giocatore.SPEED = speed
-	Global.Restrizione.dimensione = defence
+	Global.Giocatore.SPEED = int(speed)
+	Global.Restrizione.dimensione = int(defence)
 
 func reset():
 	damage = DEFAULT_DAMAGE

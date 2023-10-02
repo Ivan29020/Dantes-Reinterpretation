@@ -17,4 +17,5 @@ func scene_changed():
 		fade = tree.get_node("CanvasModulate")
 		fade.get_node("fades").play("fade_in")
 		StatManager.set_stats()
+		return
 	StatManager.reset()

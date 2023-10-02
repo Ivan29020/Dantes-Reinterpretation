@@ -13,8 +13,8 @@ scena = "res://Scena/piano_3.tscn"
 position = Vector2(300, 201)
 
 [node name="Killcounter" parent="." index="3"]
-obbiettivo = 45
-obbiettivo_hard = 30
+obbiettivo = 40
+obbiettivo_hard = 35
 
 [node name="Spawner" parent="." index="6" instance=ExtResource("2_pff5q")]
 position = Vector2(118, 128)

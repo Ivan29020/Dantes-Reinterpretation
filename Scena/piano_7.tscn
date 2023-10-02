@@ -9,7 +9,7 @@
 scena = "res://Scena/piano_8.tscn"
 
 [node name="Killcounter" parent="." index="3"]
-obbiettivo = 55
+obbiettivo = 50
 obbiettivo_hard = 80
 
 [node name="Spawner" parent="." index="7" instance=ExtResource("2_824yj")]

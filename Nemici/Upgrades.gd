@@ -81,7 +81,7 @@ func set_graphics_debuff():
 func buff_effects(idbuff):
 	match idbuff:
 		1:
-			StatManager.damage *= 1.35
+			StatManager.damage *= 1.2
 		2:
 			StatManager.attack_speed *= 0.8
 		3:
@@ -92,13 +92,13 @@ func buff_effects(idbuff):
 func debuff_effects(iddebuff):
 	match iddebuff:
 		1:
-			StatManager.damage *= 0.35
+			StatManager.damage *= 0.8
 		2:
 			StatManager.attack_speed *= 1.2
 		3:
 			StatManager.defence -= 15
 		4:
-			StatManager.speed *= 0.15
+			StatManager.speed *= 0.85
 
 func select(selection):
 	if is_debuff:

@@ -1,6 +1,7 @@
 extends nemico_base
 
 var direction
+var stopped = false
 
 func _physics_process(delta):
 	var dir = (Global.Giocatore.global_position  - global_position).normalized() 
@@ -20,4 +21,17 @@ func move_ai():
 	
 	var direction = (Global.Giocatore.global_position  - global_position).normalized() 
 	
+	if !stopped:
+		if global_position.distance_to(Global.Giocatore.global_position) > 5:
+			return direction
+		else: 
+			stopped = true
+			$Timer.start()
+	else:
+		direction = Vector2.ZERO
+	
 	return direction
+
+
+func _on_timer_timeout():
+	stopped = false

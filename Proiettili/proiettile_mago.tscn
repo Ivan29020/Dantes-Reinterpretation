@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5i0k8nt2xc1t"]
+
+[ext_resource type="PackedScene" uid="uid://d2rhx1j06u1cc" path="res://Proiettili/proiettile_base.tscn" id="1_jdiea"]
+[ext_resource type="Texture2D" uid="uid://damefob5a7cyt" path="res://Grafiche/Proiettili/Projectile.png" id="2_6gfrm"]
+
+[node name="Proiettile_base" instance=ExtResource("1_jdiea")]
+
+[node name="Sprite2D" parent="." index="1"]
+modulate = Color(0, 0.380392, 0.0509804, 1)
+texture = ExtResource("2_6gfrm")

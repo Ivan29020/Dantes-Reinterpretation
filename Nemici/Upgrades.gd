@@ -102,9 +102,11 @@ func debuff_effects(iddebuff):
 
 func select(selection):
 	if is_debuff:
+		$debuffpickup.play()
 		debuff_effects(arr[selection])
 		get_tree().change_scene_to_file(move_to)
 		return
+	$buffpickup.play()
 	buff_effects(arr[selection])
 	if is_hardmode:
 		select_buff()

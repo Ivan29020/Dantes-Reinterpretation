@@ -1,10 +1,76 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm24yu1s1toie"]
+[gd_scene load_steps=13 format=3 uid="uid://cm24yu1s1toie"]
 
 [ext_resource type="Script" path="res://Scena/Area2D1.gd" id="1_tx2hp"]
-[ext_resource type="Texture2D" uid="uid://kghq8nd24jbk" path="res://Grafiche/Ultimate/Stanze/Stanze/Porta.png" id="2_wbcds"]
+[ext_resource type="Texture2D" uid="uid://e743y7inndlx" path="res://Grafiche/Ultimate/Stanze/Porta aperta 7.png" id="2_fp300"]
+[ext_resource type="Texture2D" uid="uid://d25gli6u8v0wp" path="res://Grafiche/Ultimate/Stanze/Porta aperta 6.png" id="3_j3r4u"]
+[ext_resource type="Texture2D" uid="uid://cv3p4ri47nrxm" path="res://Grafiche/Ultimate/Stanze/Porta aperta 5.png" id="4_j044x"]
+[ext_resource type="Texture2D" uid="uid://3wt7a5u20457" path="res://Grafiche/Ultimate/Stanze/Porta aperta 4.png" id="5_r7u0q"]
+[ext_resource type="Texture2D" uid="uid://dlm5dlw4u08y4" path="res://Grafiche/Ultimate/Stanze/Porta aperta 3.png" id="6_pu8ot"]
+[ext_resource type="Texture2D" uid="uid://c6v4r3e8frueg" path="res://Grafiche/Ultimate/Stanze/Porta aperta 2.png" id="7_gpnnb"]
+[ext_resource type="Texture2D" uid="uid://ckev712b50aqv" path="res://Grafiche/Ultimate/Stanze/Porta Chiusa start.png" id="8_g5jhs"]
+[ext_resource type="Texture2D" uid="uid://h5xmnq1fxrd8" path="res://Grafiche/Ultimate/Stanze/Porta aperta last.png" id="9_owmxp"]
+[ext_resource type="AudioStream" uid="uid://dnpymh160b8he" path="res://Songs/door_sfx.mp3" id="10_35pu1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2fsr"]
 radius = 24.0208
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxjw5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fp300")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j3r4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j044x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r7u0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pu8ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gpnnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g5jhs")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_g5jhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gpnnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pu8ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r7u0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j044x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j3r4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fp300")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_owmxp")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
 
 [node name="Porta" type="Area2D"]
 position = Vector2(1, 7)
@@ -16,9 +82,13 @@ scena = "res://Scena/piano_2.tscn"
 position = Vector2(302, 20)
 shape = SubResource("CircleShape2D_b2fsr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(302, 14)
-texture = ExtResource("2_wbcds")
+sprite_frames = SubResource("SpriteFrames_uxjw5")
+animation = &"open"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_35pu1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

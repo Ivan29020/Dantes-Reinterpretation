@@ -20,10 +20,6 @@ func get_direction_as_string():
 		return "right"
 	if dir.x < 0 :
 		return "left"
-	if dir.y > 0 :
-		return "down"
-	if dir.y < 0 :
-		return "up"
 
 func move_ai():
 	

@@ -54,3 +54,7 @@ punteggio = 10
 [node name="Sprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_mrws3")
 animation = &"Idle_right"
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

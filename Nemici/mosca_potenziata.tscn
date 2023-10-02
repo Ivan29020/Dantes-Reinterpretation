@@ -54,6 +54,7 @@ animation = &"Idle_right"
 
 [node name="Spawner_proiettili" parent="." index="3" instance=ExtResource("3_woa8u")]
 amount = 3
+spazio = 13.0
 velocita_fuoco = 2.0
 danno_proiettile = 15
 velocita_proiettile = 70

@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://coqwac37spe02"]
+[gd_scene load_steps=8 format=3 uid="uid://coqwac37spe02"]
 
 [ext_resource type="Script" path="res://Nemici/Upgrades.gd" id="1_80xha"]
 [ext_resource type="Texture2D" uid="uid://dqdslcwwxe5hu" path="res://Grafiche/Stats/Attack Up Power Up.png" id="2_xweer"]
 [ext_resource type="Texture2D" uid="uid://b7pf7i5faad64" path="res://Grafiche/Stats/Defence Up Buff.png" id="3_7be3a"]
 [ext_resource type="Texture2D" uid="uid://ykvjfvmol23o" path="res://Grafiche/Stats/Speed Up power up.png" id="4_0lqvt"]
 [ext_resource type="FontFile" uid="uid://dtkns46skkw" path="res://Grafiche/font/LuxuriousRoman-Regular.ttf" id="5_a8vb2"]
+[ext_resource type="AudioStream" uid="uid://bgphj312gdug2" path="res://Songs/buff_pickup_sfx.mp3" id="6_aa76k"]
+[ext_resource type="AudioStream" uid="uid://du86q3ctopn6m" path="res://Songs/debuff_sfx.mp3" id="7_dkfeg"]
 
 [node name="Upgrades" type="Control"]
 visible = false
@@ -128,6 +130,12 @@ offset_bottom = 692.0
 theme_override_fonts/font = ExtResource("5_a8vb2")
 theme_override_font_sizes/font_size = 35
 text = "Choose an upgrade"
+
+[node name="buffpickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_aa76k")
+
+[node name="debuffpickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dkfeg")
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer2/Button2" to="." method="_on_button_2_pressed"]

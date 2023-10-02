@@ -13,7 +13,8 @@ var diz_nemici = {
 	4 : "res://Nemici/mosca_ranged.tscn",
 	5 : "res://Nemici/melee_potenziato.tscn",
 	6 : "res://Nemici/ranged_potenziato.tscn",
-	7 : "res://Nemici/mosca_potenziata.tscn"
+	7 : "res://Nemici/mosca_potenziata.tscn",
+	8 : "res://Nemici/mage.tscn"
 	}
 var nemico
 

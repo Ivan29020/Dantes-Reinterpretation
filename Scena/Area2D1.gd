@@ -20,6 +20,11 @@ func _on_body_exited(body):
 
 func open(apri):
 	is_open = apri
+	$AudioStreamPlayer.play()
+	if is_open:
+		$Sprite2D.play("open")
+		return
+	$Sprite2D.play("close")
 
 func _process(delta):
 	if entered == true:

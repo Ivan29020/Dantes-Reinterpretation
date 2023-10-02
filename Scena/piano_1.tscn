@@ -21,11 +21,12 @@ collision_layer = 32
 script = ExtResource("2_64pfk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(157, 23)
+position = Vector2(302, 20)
 shape = SubResource("CircleShape2D_b2fsr")
 
 [node name="Giocatore" parent="." instance=ExtResource("3_cwr6g")]
-position = Vector2(163, 97)
+position = Vector2(300, 201)
+collision_mask = 1
 
 [node name="Killcounter" parent="." instance=ExtResource("5_easrx")]
 offset_left = 72.0
@@ -36,7 +37,9 @@ obbiettivo = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Restrizione" parent="." instance=ExtResource("6_wl6vh")]
-position = Vector2(153, 88)
+position = Vector2(300, 201)
+max_dimensione = 200
+dimensione = 200
 
 [node name="nemico_base" parent="." instance=ExtResource("6_nwqe6")]
 position = Vector2(60, 117)

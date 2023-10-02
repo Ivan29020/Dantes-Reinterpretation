@@ -1,8 +1,8 @@
 extends Area2D
 
-var max_dimensione : int = 100
-var dimensione : int = 100 : set = cambia_dimensione;
-var velocita_restrizione : float = 1
+@export var max_dimensione : int = 100
+@export var dimensione : int = 100 : set = cambia_dimensione;
+@export var velocita_restrizione : float = 1
 
 const PERCENTUALE_MODALITA_HARD = 0.35
 const PERCENTUALE_MORTE = 0.05

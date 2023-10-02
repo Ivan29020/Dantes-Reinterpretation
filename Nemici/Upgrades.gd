@@ -83,7 +83,7 @@ func buff_effects(idbuff):
 		1:
 			StatManager.damage += 5
 		2:
-			StatManager.attack_speed += 0.2
+			StatManager.attack_speed -= 0.2
 		3:
 			StatManager.defence += 10
 		4:
@@ -94,7 +94,7 @@ func debuff_effects(iddebuff):
 		1:
 			StatManager.damage -= 5
 		2:
-			StatManager.attack_speed-= 0.2
+			StatManager.attack_speed += 0.2
 		3:
 			StatManager.defence -= 10
 		4:

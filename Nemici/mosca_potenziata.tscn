@@ -47,6 +47,7 @@ animations = [{
 
 [node name="nemico_base" instance=ExtResource("1_16ydn")]
 script = ExtResource("2_q7hmd")
+punteggio = 15
 
 [node name="Sprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_u5l7j")

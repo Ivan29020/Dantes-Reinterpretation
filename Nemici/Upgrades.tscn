@@ -1,0 +1,134 @@
+[gd_scene load_steps=6 format=3 uid="uid://coqwac37spe02"]
+
+[ext_resource type="Script" path="res://Nemici/Upgrades.gd" id="1_80xha"]
+[ext_resource type="Texture2D" uid="uid://dqdslcwwxe5hu" path="res://Grafiche/Stats/Attack Up Power Up.png" id="2_xweer"]
+[ext_resource type="Texture2D" uid="uid://b7pf7i5faad64" path="res://Grafiche/Stats/Defence Up Buff.png" id="3_7be3a"]
+[ext_resource type="Texture2D" uid="uid://ykvjfvmol23o" path="res://Grafiche/Stats/Speed Up power up.png" id="4_0lqvt"]
+[ext_resource type="FontFile" uid="uid://dtkns46skkw" path="res://Grafiche/font/LuxuriousRoman-Regular.ttf" id="5_a8vb2"]
+
+[node name="Upgrades" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_80xha")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.117647, 0.0745098, 0.0784314, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Up1" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Up1"]
+layout_mode = 2
+texture = ExtResource("2_xweer")
+expand_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Up1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_a8vb2")
+theme_override_font_sizes/font_size = 35
+text = "ATK up"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+disabled = true
+flat = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Up2" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer2/Up2"]
+layout_mode = 2
+texture = ExtResource("3_7be3a")
+expand_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer2/Up2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_a8vb2")
+theme_override_font_sizes/font_size = 35
+text = "DEF up"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+disabled = true
+flat = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Up3" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer3/Up3"]
+layout_mode = 2
+texture = ExtResource("4_0lqvt")
+expand_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer3/Up3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_a8vb2")
+theme_override_font_sizes/font_size = 35
+text = "Speed up"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+disabled = true
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 496.0
+offset_top = 646.0
+offset_right = 1776.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("5_a8vb2")
+theme_override_font_sizes/font_size = 35
+text = "Choose an upgrade"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/MarginContainer3/Button3" to="." method="_on_button_3_pressed"]

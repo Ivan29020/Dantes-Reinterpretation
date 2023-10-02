@@ -7,9 +7,11 @@ extends AnimatedSprite2D
 
 # a ogni numero corrisponde un nemico
 var diz_nemici = {
-	1 : "res://Nemici/nemico_base.tscn" #solo per testing
+	1 : "res://Nemici/nemico_base.tscn", #solo per testing
+	2 : "res://Nemici/nemico_melee.tscn",
+	3 : "res://Nemici/nemico_ranged.tscn",
+	4 : "res://Nemici/mosca_ranged.tscn"
 	}
-
 var nemico
 
 func _ready():
@@ -17,7 +19,7 @@ func _ready():
 	if !hard_mode:
 		$Timer.start()
 		return
-	add_to_group("hardmode")
+	
 
 func crea_nemico():
 	var nnem = load(diz_nemici[id])
@@ -29,7 +31,8 @@ func spawna_nemico():
 
 func _on_timer_timeout():
 	crea_nemico()
-	$Sprite2D.texture = nemico.get_node("Sprite2D").texture
+	$Sprite2D.texture = nemico.get_node("Sprite2D").sprite_frames.get_frame_texture("Idle_right",0)
+	visible = true
 	play("default")
 	$AnimationPlayer.play("fade")
 

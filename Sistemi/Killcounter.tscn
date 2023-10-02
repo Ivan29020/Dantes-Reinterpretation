@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 0
+mouse_filter = 2
 script = ExtResource("1_0fphk")
 
 [node name="Label" type="Label" parent="."]
@@ -28,5 +29,6 @@ text = "Enemies to kill: 0/0"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 8.0
+one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

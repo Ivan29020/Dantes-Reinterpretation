@@ -22,6 +22,7 @@ buses/default_bus_layout="res://Menu/default_bus_layout.tres"
 [autoload]
 
 Global="*res://Sistemi/global.tscn"
+StatManager="*res://Sistemi/stat_manager.tscn"
 
 [display]
 

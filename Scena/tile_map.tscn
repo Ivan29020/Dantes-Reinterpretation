@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bvybju4b7efsr"]
+[gd_scene load_steps=66 format=3 uid="uid://bvybju4b7efsr"]
 
 [ext_resource type="Texture2D" uid="uid://bohjy4ynum2m8" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro lato destro.png" id="1_8yhmw"]
 [ext_resource type="Texture2D" uid="uid://cwwkx4utuajwy" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro angolo 2.png" id="2_2avpa"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bnr0ojtksy0a4" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro angolo 3.png" id="3_1lr7t"]
 [ext_resource type="Texture2D" uid="uid://ta8li15vfc81" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro angolo 4.png" id="4_7yfth"]
 [ext_resource type="Texture2D" uid="uid://ci1x4yfj4xoel" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro angolo.png" id="5_v8y51"]
-[ext_resource type="Texture2D" uid="uid://e8m2a6fyqlwy" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Muro 1.png" id="6_v5n1a"]
+[ext_resource type="Texture2D" uid="uid://dbpnk6jn7naqo" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Muro 1.png" id="6_v5n1a"]
 [ext_resource type="Texture2D" uid="uid://dd7oe3fspl4xh" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro lato sinistro.png" id="8_tpq5p"]
 [ext_resource type="Texture2D" uid="uid://0jtede6vjdxh" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Pavimento.png" id="9_j5evd"]
 [ext_resource type="Texture2D" uid="uid://dgfntv6wb5jsq" path="res://Grafiche/Stanze/Barile.png" id="10_2k1c4"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bntypsv7e21bb" path="res://Grafiche/stanza completa/Pavimento angolo up dx.png" id="29_3x10y"]
 [ext_resource type="Texture2D" uid="uid://bvuf5sx1ncpt" path="res://Grafiche/stanza completa/Pavimento angolo bs sx.png" id="30_pp72w"]
 [ext_resource type="Texture2D" uid="uid://cfe4fsx625db1" path="res://Grafiche/stanza completa/Pavimento angolo bs dx.png" id="31_r05v6"]
+[ext_resource type="PackedScene" uid="uid://coqwac37spe02" path="res://Nemici/Upgrades.tscn" id="32_fstyl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oqj7j"]
 
@@ -491,3 +492,5 @@ layer_2/tile_data = PackedInt32Array(262159, 27, 1, 196623, 19, 0, 131074, 19, 0
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(295, 210)
 zoom = Vector2(2.17, 1.73)
+
+[node name="Upgrades" parent="Camera2D" instance=ExtResource("32_fstyl")]

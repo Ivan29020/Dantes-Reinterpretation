@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dn37x3ltlsvbv"]
+[gd_scene load_steps=11 format=3 uid="uid://dn37x3ltlsvbv"]
 
 [ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_5rgdw"]
 [ext_resource type="PackedScene" uid="uid://cm24yu1s1toie" path="res://Scena/porta.tscn" id="2_52po0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bf1nylkor0d57" path="res://Nemici/nemico_ranged.tscn" id="7_8bqs5"]
 [ext_resource type="PackedScene" uid="uid://dp08rxofkmkal" path="res://Nemici/mosca_ranged.tscn" id="8_bhxh3"]
 [ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="9_jat7c"]
+[ext_resource type="PackedScene" uid="uid://bvumkdoysumuq" path="res://Sistemi/fade.tscn" id="10_8cfxv"]
 
 [node name="Piano 1" type="Node2D"]
 
@@ -27,11 +28,6 @@ offset_right = 72.0
 offset_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Restrizione" parent="." instance=ExtResource("6_wl6vh")]
-position = Vector2(300, 201)
-max_dimensione = 200
-dimensione = 200
-
 [node name="nemico_base" parent="." instance=ExtResource("6_nwqe6")]
 position = Vector2(60, 117)
 
@@ -49,3 +45,10 @@ id = 2
 position = Vector2(115, 174)
 id = 4
 hard_mode = true
+
+[node name="Restrizione" parent="." instance=ExtResource("6_wl6vh")]
+position = Vector2(300, 201)
+max_dimensione = 200
+dimensione = 200
+
+[node name="CanvasModulate" parent="." instance=ExtResource("10_8cfxv")]

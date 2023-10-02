@@ -7,7 +7,6 @@ extends Control
 var hard_active : bool = false
 var is_forced_hard : bool = false
 
-
 func aggiorna_punteggio(nuovo):
 	punteggio = nuovo
 	$Label.text = "Enemies to kill: " + str(punteggio) + "/" + str(obbiettivo)

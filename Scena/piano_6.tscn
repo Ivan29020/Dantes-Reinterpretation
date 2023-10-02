@@ -1,8 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm1lkrd8bgj1r"]
+[gd_scene load_steps=3 format=3 uid="uid://cggkgim18u028"]
 
-[ext_resource type="PackedScene" uid="uid://dssmtu4pp80b6" path="res://Scena/piano_5.tscn" id="1_fwuwy"]
+[ext_resource type="PackedScene" uid="uid://bh0juf18k6xbo" path="res://Scena/piano_base.tscn" id="1_j5g32"]
+[ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="2_8cs7c"]
 
-[node name="piano_6" instance=ExtResource("1_fwuwy")]
+[node name="Piano_6" instance=ExtResource("1_j5g32")]
 
 [node name="Porta" parent="." index="1"]
 scena = "res://Scena/piano_7.tscn"
+
+[node name="Killcounter" parent="." index="3"]
+obbiettivo = 40
+obbiettivo_hard = 70
+
+[node name="Spawner" parent="." index="7" instance=ExtResource("2_8cs7c")]
+position = Vector2(432, 199)
+time = 0.5
+id = 2
+
+[node name="Spawner2" parent="." index="8" instance=ExtResource("2_8cs7c")]
+position = Vector2(156, 200)
+time = 0.5
+id = 2
+
+[node name="Spawner3" parent="." index="9" instance=ExtResource("2_8cs7c")]
+position = Vector2(293, 374)
+time = 0.5
+id = 4
+
+[node name="Spawner4" parent="." index="10" instance=ExtResource("2_8cs7c")]
+position = Vector2(302, 56)
+time = 0.5
+id = 4
+
+[node name="Spawner5" parent="." index="11" instance=ExtResource("2_8cs7c")]
+position = Vector2(504, 172)
+time = 0.5
+id = 3
+
+[node name="Spawner6" parent="." index="12" instance=ExtResource("2_8cs7c")]
+position = Vector2(61, 171)
+time = 0.5
+id = 3
+
+[node name="Spawner7" parent="." index="13" instance=ExtResource("2_8cs7c")]
+position = Vector2(420, 73)
+time = 0.5
+id = 5
+hard_mode = true
+
+[node name="Spawner8" parent="." index="14" instance=ExtResource("2_8cs7c")]
+position = Vector2(138, 73)
+time = 0.5
+id = 5
+hard_mode = true
+
+[node name="Spawner9" parent="." index="15" instance=ExtResource("2_8cs7c")]
+position = Vector2(487, 274)
+time = 0.5
+id = 6
+hard_mode = true
+
+[node name="Spawner10" parent="." index="16" instance=ExtResource("2_8cs7c")]
+position = Vector2(373, 377)
+time = 0.5
+id = 7
+hard_mode = true
+
+[node name="Spawner11" parent="." index="17" instance=ExtResource("2_8cs7c")]
+position = Vector2(206, 373)
+time = 0.5
+id = 7
+hard_mode = true
+
+[node name="Spawner12" parent="." index="18" instance=ExtResource("2_8cs7c")]
+position = Vector2(90, 285)
+time = 0.5
+id = 6
+hard_mode = true

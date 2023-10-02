@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceefqai842qqx"]
+[gd_scene load_steps=2 format=3 uid="uid://rxuacop1720l"]
 
 [ext_resource type="PackedScene" uid="uid://da06v0r6xyjpt" path="res://Scena/piano_1.tscn" id="1_usvuc"]
 
@@ -10,3 +10,18 @@ scena = "res://Scena/piano_5.tscn"
 [node name="Killcounter" parent="." index="3"]
 obbiettivo = 35
 obbiettivo_hard = 45
+
+[node name="Spawner" parent="." index="7"]
+id = 4
+
+[node name="Spawner2" parent="." index="8"]
+id = 4
+
+[node name="Spawner6" parent="." index="12"]
+id = 6
+
+[node name="Spawner7" parent="." index="13"]
+id = 5
+
+[node name="Spawner8" parent="." index="14"]
+id = 5

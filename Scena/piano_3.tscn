@@ -6,7 +6,7 @@
 [node name="Piano_3" instance=ExtResource("1_m23gu")]
 
 [node name="Porta" parent="." index="1"]
-scena = "res://Scena/piano_4.tscn"
+scena = "res://Scena/piano_5.tscn"
 
 [node name="Giocatore" parent="." index="2"]
 position = Vector2(300, 204)

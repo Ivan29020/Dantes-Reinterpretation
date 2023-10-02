@@ -34,4 +34,4 @@ func _on_body_entered(body):
 func _on_timer_morte_timeout():
 	# Codice per il game over
 	if !Global.fade.is_fading:
-		get_tree().change_scene_to_file("res://Menu/menu.tscn")
+		get_tree().change_scene_to_file("res://Menu/game_over.tscn")

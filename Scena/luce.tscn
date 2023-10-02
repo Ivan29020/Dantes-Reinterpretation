@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://wr3gc6nc18xp"]
+
+[ext_resource type="Texture2D" uid="uid://ciome7q3va1r5" path="res://Grafiche/Ultimate/Stanze/Luce n1.png" id="1_a3suu"]
+[ext_resource type="Texture2D" uid="uid://cb2ynh0mm5xjl" path="res://Grafiche/Ultimate/Stanze/Luce n2.png" id="2_e6ln2"]
+[ext_resource type="Texture2D" uid="uid://7yhpwsqfmptv" path="res://Grafiche/Ultimate/Stanze/Luce n3.png" id="3_0qti6"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_8alkt"]
+frames = 4
+speed_scale = 0.5
+frame_0/texture = ExtResource("1_a3suu")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("2_e6ln2")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("1_a3suu")
+frame_2/duration = 0.2
+frame_3/texture = ExtResource("3_0qti6")
+frame_3/duration = 0.2
+
+[node name="PointLight2D" type="PointLight2D"]
+position = Vector2(132, 80)
+scale = Vector2(33.8625, 65.1375)
+color = Color(1, 1, 1, 0.403922)
+texture = SubResource("AnimatedTexture_8alkt")

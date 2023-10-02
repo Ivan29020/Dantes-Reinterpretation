@@ -11,11 +11,18 @@ var morte = preload("res://animazione_morte.tscn")
 
 func aggiorna_hp(newhp):
 	
+	
 	hp = newhp
 	if hp >= maxhp:
 		hp = maxhp
 	if hp <= 0:
 		muori()
+	
+	
+	var healthbar = $healthbar
+	
+	healthbar.value = maxhp
+
 
 func muori():
 	Global.Restrizione.dimensione += regen
@@ -33,6 +40,10 @@ func _process(delta):
 	
 	velocity = dir * vel
 	move_and_slide()
+	
+	
+	
+	
 
 func move_ai():
 	

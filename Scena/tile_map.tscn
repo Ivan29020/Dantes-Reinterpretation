@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://bvybju4b7efsr"]
+[gd_scene load_steps=66 format=3 uid="uid://bvybju4b7efsr"]
 
 [ext_resource type="Texture2D" uid="uid://bohjy4ynum2m8" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro lato destro.png" id="1_8yhmw"]
 [ext_resource type="Texture2D" uid="uid://cwwkx4utuajwy" path="res://Grafiche/Si sono sempre zip/No Zip/Stanze/Stanze/Muro angolo 2.png" id="2_2avpa"]
@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://bntypsv7e21bb" path="res://Grafiche/stanza completa/Pavimento angolo up dx.png" id="29_3x10y"]
 [ext_resource type="Texture2D" uid="uid://bvuf5sx1ncpt" path="res://Grafiche/stanza completa/Pavimento angolo bs sx.png" id="30_pp72w"]
 [ext_resource type="Texture2D" uid="uid://cfe4fsx625db1" path="res://Grafiche/stanza completa/Pavimento angolo bs dx.png" id="31_r05v6"]
-[ext_resource type="PackedScene" path="res://Scena/luce.tscn" id="32_4jhqt"]
 [ext_resource type="PackedScene" uid="uid://coqwac37spe02" path="res://Nemici/Upgrades.tscn" id="32_fstyl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oqj7j"]
@@ -470,8 +469,6 @@ sources/38 = SubResource("TileSetAtlasSource_be6i2")
 sources/39 = SubResource("TileSetAtlasSource_sq1np")
 sources/40 = SubResource("TileSetAtlasSource_4uln6")
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_e0mev"]
-
 [node name="TileMap" type="TileMap"]
 position = Vector2(-1, -1)
 tile_set = SubResource("TileSet_dcydr")
@@ -498,36 +495,3 @@ position = Vector2(295, 210)
 zoom = Vector2(2.17, 1.73)
 
 [node name="Upgrades" parent="Camera2D" instance=ExtResource("32_fstyl")]
-
-[node name="PointLight2D" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(57, 41)
-scale = Vector2(0.575625, 0.53875)
-
-[node name="PointLight2D2" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(40, 152)
-scale = Vector2(0.64, 0.61375)
-
-[node name="PointLight2D3" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(23, 280)
-scale = Vector2(0.49, 0.458751)
-
-[node name="PointLight2D4" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(25, 328)
-scale = Vector2(0.45, 0.39875)
-
-[node name="PointLight2D5" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(568, 35)
-scale = Vector2(0.255, 0.24875)
-texture = SubResource("AnimatedTexture_e0mev")
-
-[node name="PointLight2D6" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(441, 89)
-scale = Vector2(0.565, 0.564375)
-
-[node name="PointLight2D7" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(248, 72)
-scale = Vector2(0.5725, 0.502188)
-
-[node name="PointLight2D8" parent="." instance=ExtResource("32_4jhqt")]
-position = Vector2(566, 41)
-scale = Vector2(0.5725, 0.502188)

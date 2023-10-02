@@ -47,7 +47,7 @@ offset_bottom = 302.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_mr5mf")
 theme_override_font_sizes/font_size = 30
-text = "Dante's Game"
+text = "Dante's Reinterpretation"
 horizontal_alignment = 1
 vertical_alignment = 1
 

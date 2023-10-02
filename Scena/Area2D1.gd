@@ -30,6 +30,7 @@ func _process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("button3"):
 			if is_open == true:
+				Global.Giocatore.visible = false
 				Global.upgrades.move_to = scena
 				Global.fade.get_node("fades").play("fade_out")
 				Global.fade.is_fading = true

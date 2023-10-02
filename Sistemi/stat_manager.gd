@@ -3,7 +3,7 @@ extends Node2D
 const DEFAULT_DAMAGE = 10
 const DEFAULT_ATKSPEED = 1
 const DEFAULT_DEFENCE = 200
-const DEFAULT_SPEED = 300
+const DEFAULT_SPEED = 175
 
 var damage : int = DEFAULT_DAMAGE
 var attack_speed : float = DEFAULT_ATKSPEED

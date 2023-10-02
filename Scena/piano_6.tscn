@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhnu71qxyy7s0"]
+
+[ext_resource type="PackedScene" uid="uid://cw36uxlubss1r" path="res://Scena/piano_5.tscn" id="1_fwuwy"]
+
+[node name="piano_6" instance=ExtResource("1_fwuwy")]
+
+[node name="Porta" parent="." index="1"]
+scena = "res://Scena/piano_7.tscn"

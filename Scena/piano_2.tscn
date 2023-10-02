@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dei1urtcgapyf"]
+
+[ext_resource type="PackedScene" path="res://Scena/piano_base.tscn" id="1_8jvwr"]
+[ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="2_pff5q"]
+
+[node name="Piano 2" instance=ExtResource("1_8jvwr")]
+
+[node name="Porta" parent="." index="1"]
+position = Vector2(1, 3)
+scena = "res://Scena/piano_3.tscn"
+
+[node name="Giocatore" parent="." index="2"]
+position = Vector2(300, 201)
+
+[node name="Spawner" parent="." index="6" instance=ExtResource("2_pff5q")]
+position = Vector2(118, 128)
+id = 4
+
+[node name="Spawner2" parent="." index="7" instance=ExtResource("2_pff5q")]
+position = Vector2(83, 337)
+id = 4
+
+[node name="Spawner3" parent="." index="8" instance=ExtResource("2_pff5q")]
+position = Vector2(269, 37)
+id = 2
+
+[node name="Spawner4" parent="." index="9" instance=ExtResource("2_pff5q")]
+position = Vector2(511, 151)
+id = 4
+
+[node name="Spawner5" parent="." index="10" instance=ExtResource("2_pff5q")]
+position = Vector2(346, 378)
+id = 2
+
+[node name="Spawner6" parent="." index="11" instance=ExtResource("2_pff5q")]
+position = Vector2(543, 282)
+id = 3

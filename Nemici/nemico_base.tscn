@@ -19,3 +19,15 @@ animation = &""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_k1jhs")
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = -9.0
+offset_top = 11.0
+offset_right = 171.0
+offset_bottom = 51.0
+scale = Vector2(0.1, 0.1)
+step = 1.0
+show_percentage = false
+
+[connection signal="ready" from="healthbar" to="." method="_on_healthbar_ready"]

@@ -92,13 +92,3 @@ animation = &"Idle_right"
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0.5, 1)
-
-[node name="healthbar" type="ProgressBar" parent="." index="2"]
-modulate = Color(1, 0, 0, 1)
-offset_left = -8.0
-offset_top = 11.0
-offset_right = 172.0
-offset_bottom = 51.0
-scale = Vector2(0.1, 0.1)
-value = 100.0
-show_percentage = false

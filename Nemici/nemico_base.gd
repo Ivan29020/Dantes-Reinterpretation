@@ -17,12 +17,7 @@ func aggiorna_hp(newhp):
 		hp = maxhp
 	if hp <= 0:
 		muori()
-	
-	
-	var healthbar = $healthbar
-	
-	healthbar.value = maxhp
-
+	$healthbar.value = hp
 
 func muori():
 	Global.Restrizione.dimensione += regen
@@ -50,3 +45,6 @@ func move_ai():
 	var dir : Vector2 = (Global.Giocatore.global_position - global_position).normalized()
 	
 	return dir
+
+func _on_healthbar_ready():
+	$healthbar.max_value = maxhp

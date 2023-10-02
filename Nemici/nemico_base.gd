@@ -7,7 +7,7 @@ class_name nemico_base extends CharacterBody2D
 @export var punteggio : int = 5
 @export var danni_melee : int = 10
 
-var morte = preload("res://animazione_morte.tscn")
+var morte = preload("res://Nemici/animazione_morte.tscn")
 
 func aggiorna_hp(newhp):
 	

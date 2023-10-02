@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://bh0juf18k6xbo"]
+
+[ext_resource type="PackedScene" uid="uid://bvybju4b7efsr" path="res://Scena/tile_map.tscn" id="1_waq85"]
+[ext_resource type="PackedScene" uid="uid://cm24yu1s1toie" path="res://Scena/porta.tscn" id="2_87way"]
+[ext_resource type="PackedScene" uid="uid://cdim5rvmj2t2n" path="res://Giocatore/dante.tscn" id="3_4gmu5"]
+[ext_resource type="PackedScene" uid="uid://c81usjbg52chb" path="res://Sistemi/Killcounter.tscn" id="4_hn8go"]
+[ext_resource type="PackedScene" uid="uid://dcwyiqaqurb7y" path="res://Sistemi/restrizione.tscn" id="5_mro2h"]
+[ext_resource type="PackedScene" uid="uid://bvumkdoysumuq" path="res://Sistemi/fade.tscn" id="6_lkmqr"]
+
+[node name="Piano_base" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_waq85")]
+
+[node name="Porta" parent="." instance=ExtResource("2_87way")]
+
+[node name="Giocatore" parent="." instance=ExtResource("3_4gmu5")]
+
+[node name="Killcounter" parent="." instance=ExtResource("4_hn8go")]
+offset_left = 81.0
+offset_top = 14.0
+offset_right = 81.0
+offset_bottom = 14.0
+
+[node name="Restrizione" parent="." instance=ExtResource("5_mro2h")]
+position = Vector2(300, 204)
+
+[node name="CanvasModulate" parent="." instance=ExtResource("6_lkmqr")]

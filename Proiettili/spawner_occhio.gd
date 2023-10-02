@@ -1,0 +1,3 @@
+extends spawner_proiettili
+
+

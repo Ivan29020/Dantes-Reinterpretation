@@ -15,6 +15,10 @@ run/main_scene="res://Menu/menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://Test/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://Menu/default_bus_layout.tres"
+
 [autoload]
 
 Global="*res://Sistemi/global.tscn"

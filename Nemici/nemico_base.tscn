@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://cf8sxoekehwb6"]
 
 [ext_resource type="Script" path="res://Nemici/nemico_base.gd" id="1_2wmcm"]
-[ext_resource type="Texture2D" uid="uid://c3bh3enp8yxqt" path="res://Test/icon.svg" id="2_k8tyd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ewv48"]
+animations = []
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1jhs"]
 
@@ -10,9 +12,10 @@ collision_layer = 2
 collision_mask = 16
 script = ExtResource("1_2wmcm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.18, 0.18)
-texture = ExtResource("2_k8tyd")
+sprite_frames = SubResource("SpriteFrames_ewv48")
+animation = &""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_k1jhs")

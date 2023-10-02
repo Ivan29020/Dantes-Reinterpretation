@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqxax1rgig2uc"]
+
+[ext_resource type="PackedScene" uid="uid://dnwsaeqjmxouh" path="res://Proiettili/spawner_proiettili.tscn" id="1_8r4ww"]
+[ext_resource type="Script" path="res://Proiettili/spawner_mosca.gd" id="2_4onjh"]
+[ext_resource type="PackedScene" uid="uid://dfal4u1urkmms" path="res://Proiettili/proiettile_mosca.tscn" id="3_wego4"]
+
+[node name="Spawner_proiettili" instance=ExtResource("1_8r4ww")]
+script = ExtResource("2_4onjh")
+amount = 10
+spacing = 0.2
+proiettile_arma = ExtResource("3_wego4")
+velocita_fuoco = 5.0
+
+[node name="velocitafuoco" parent="." index="0"]
+wait_time = 4.0
+
+[node name="Spacing" type="Timer" parent="." index="1"]
+wait_time = 0.2
+
+[connection signal="ready" from="Spacing" to="." method="_on_spacing_ready"]
+[connection signal="timeout" from="Spacing" to="." method="_on_spacing_timeout"]

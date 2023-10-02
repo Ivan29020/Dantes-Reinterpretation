@@ -1,68 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://40af4bx5q25q"]
+[gd_scene load_steps=2 format=3 uid="uid://dssmtu4pp80b6"]
 
-[ext_resource type="PackedScene" uid="uid://bh0juf18k6xbo" path="res://Scena/piano_base.tscn" id="1_xdnns"]
-[ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="2_aefrm"]
+[ext_resource type="PackedScene" uid="uid://da06v0r6xyjpt" path="res://Scena/piano_1.tscn" id="1_yedcb"]
 
-[node name="Piano_5" instance=ExtResource("1_xdnns")]
+[node name="piano_5" instance=ExtResource("1_yedcb")]
 
 [node name="Porta" parent="." index="1"]
 scena = "res://Scena/piano_6.tscn"
-
-[node name="Killcounter" parent="." index="3"]
-obbiettivo = 35
-obbiettivo_hard = 55
-
-[node name="Spawner" parent="." index="7" instance=ExtResource("2_aefrm")]
-position = Vector2(126, 98)
-time = 0.5
-id = 4
-
-[node name="Spawner2" parent="." index="8" instance=ExtResource("2_aefrm")]
-position = Vector2(489, 154)
-time = 0.5
-id = 4
-
-[node name="Spawner3" parent="." index="9" instance=ExtResource("2_aefrm")]
-position = Vector2(413, 364)
-time = 0.5
-id = 3
-
-[node name="Spawner4" parent="." index="10" instance=ExtResource("2_aefrm")]
-position = Vector2(171, 349)
-time = 0.5
-id = 3
-
-[node name="Spawner5" parent="." index="11" instance=ExtResource("2_aefrm")]
-position = Vector2(158, 203)
-time = 0.5
-id = 2
-
-[node name="Spawner6" parent="." index="12" instance=ExtResource("2_aefrm")]
-position = Vector2(154, 67)
-time = 0.5
-id = 5
-hard_mode = true
-
-[node name="Spawner7" parent="." index="13" instance=ExtResource("2_aefrm")]
-position = Vector2(412, 71)
-time = 0.5
-id = 5
-hard_mode = true
-
-[node name="Spawner8" parent="." index="14" instance=ExtResource("2_aefrm")]
-position = Vector2(518, 221)
-time = 0.5
-id = 6
-hard_mode = true
-
-[node name="Spawner9" parent="." index="15" instance=ExtResource("2_aefrm")]
-position = Vector2(301, 375)
-time = 0.5
-id = 3
-hard_mode = true
-
-[node name="Spawner10" parent="." index="16" instance=ExtResource("2_aefrm")]
-position = Vector2(69, 229)
-time = 0.5
-id = 6
-hard_mode = true

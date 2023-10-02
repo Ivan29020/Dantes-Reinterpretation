@@ -16,5 +16,5 @@ func scene_changed():
 		upgrades = tree.get_node("TileMap").get_node("Camera2D").get_node("Upgrades")
 		fade = tree.get_node("CanvasModulate")
 		fade.get_node("fades").play("fade_in")
-		StatManager.reset()
 		StatManager.set_stats()
+	StatManager.reset()

@@ -35,12 +35,13 @@ func aggiorna_obbiettivo(nuovo):
 
 func _on_timer_timeout():
 	#inizia hard mode
-	hard_active = true
-	Global.tree.get_node("Porta").open(false)
-	for node in get_tree().get_nodes_in_group("spawner"):
-		if node.hard_mode:
-			node.get_node("Timer").start()
-	$Label.modulate = Color(0.71,0.04,0.08,1)
-	punteggio = 0
-	obbiettivo = obbiettivo_hard
+	if !Global.fade.is_fading == true:
+		hard_active = true
+		Global.tree.get_node("Porta").open(false)
+		for node in get_tree().get_nodes_in_group("spawner"):
+			if node.hard_mode:
+				node.get_node("Timer").start()
+		$Label.modulate = Color(0.71,0.04,0.08,1)
+		punteggio = 0
+		obbiettivo = obbiettivo_hard
 	

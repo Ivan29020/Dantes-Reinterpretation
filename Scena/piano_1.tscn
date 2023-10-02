@@ -1,68 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://da06v0r6xyjpt"]
+[gd_scene load_steps=2 format=3 uid="uid://da06v0r6xyjpt"]
 
 [ext_resource type="PackedScene" uid="uid://bh0juf18k6xbo" path="res://Scena/piano_base.tscn" id="1_i5kqp"]
-[ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="2_u5fal"]
 
 [node name="Piano_base" instance=ExtResource("1_i5kqp")]
 
 [node name="Giocatore" parent="." index="2"]
 position = Vector2(297, 192)
-
-[node name="Killcounter" parent="." index="3"]
-obbiettivo = 25
-obbiettivo_hard = 25
-
-[node name="Spawner" parent="." index="7" instance=ExtResource("2_u5fal")]
-position = Vector2(84, 160)
-time = 0.5
-id = 2
-
-[node name="Spawner2" parent="." index="8" instance=ExtResource("2_u5fal")]
-position = Vector2(517, 164)
-time = 0.5
-id = 2
-
-[node name="Spawner3" parent="." index="9" instance=ExtResource("2_u5fal")]
-position = Vector2(496, 337)
-time = 0.5
-id = 3
-
-[node name="Spawner4" parent="." index="10" instance=ExtResource("2_u5fal")]
-position = Vector2(310, 343)
-time = 0.5
-id = 2
-
-[node name="Spawner5" parent="." index="11" instance=ExtResource("2_u5fal")]
-position = Vector2(109, 328)
-time = 0.5
-id = 3
-
-[node name="Spawner6" parent="." index="12" instance=ExtResource("2_u5fal")]
-position = Vector2(521, 68)
-time = 0.5
-id = 3
-hard_mode = true
-
-[node name="Spawner7" parent="." index="13" instance=ExtResource("2_u5fal")]
-position = Vector2(392, 68)
-time = 0.5
-id = 2
-hard_mode = true
-
-[node name="Spawner8" parent="." index="14" instance=ExtResource("2_u5fal")]
-position = Vector2(188, 68)
-time = 0.5
-id = 2
-hard_mode = true
-
-[node name="Spawner9" parent="." index="15" instance=ExtResource("2_u5fal")]
-position = Vector2(71, 75)
-time = 0.5
-id = 3
-hard_mode = true
-
-[node name="Spawner10" parent="." index="16" instance=ExtResource("2_u5fal")]
-position = Vector2(302, 64)
-time = 0.5
-id = 2
-hard_mode = true

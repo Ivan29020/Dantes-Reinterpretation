@@ -1,79 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddqob07sqgap5"]
+[gd_scene load_steps=2 format=3 uid="uid://mj4xl7o23rvo"]
 
-[ext_resource type="PackedScene" uid="uid://bh0juf18k6xbo" path="res://Scena/piano_base.tscn" id="1_ty0bk"]
-[ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="2_3p22o"]
+[ext_resource type="PackedScene" uid="uid://bo8kvami1b73n" path="res://Scena/piano_8.tscn" id="1_s5tnx"]
 
-[node name="Piano_9" instance=ExtResource("1_ty0bk")]
+[node name="piano_9" instance=ExtResource("1_s5tnx")]
 
 [node name="Porta" parent="." index="1"]
 scena = "res://Scena/piano_finale.tscn"
-
-[node name="Killcounter" parent="." index="3"]
-obbiettivo = 50
-obbiettivo_hard = 80
-
-[node name="Spawner" parent="." index="7" instance=ExtResource("2_3p22o")]
-position = Vector2(296, 65)
-time = 0.5
-id = 2
-
-[node name="Spawner2" parent="." index="8" instance=ExtResource("2_3p22o")]
-position = Vector2(295, 351)
-time = 0.5
-id = 2
-
-[node name="Spawner3" parent="." index="9" instance=ExtResource("2_3p22o")]
-position = Vector2(440, 290)
-time = 0.5
-id = 5
-
-[node name="Spawner4" parent="." index="10" instance=ExtResource("2_3p22o")]
-position = Vector2(148, 290)
-time = 0.5
-id = 5
-
-[node name="Spawner5" parent="." index="11" instance=ExtResource("2_3p22o")]
-position = Vector2(528, 87)
-time = 0.5
-id = 4
-
-[node name="Spawner6" parent="." index="12" instance=ExtResource("2_3p22o")]
-position = Vector2(56, 83)
-time = 0.5
-id = 4
-
-[node name="Spawner7" parent="." index="13" instance=ExtResource("2_3p22o")]
-position = Vector2(391, 352)
-time = 0.5
-id = 5
-hard_mode = true
-
-[node name="Spawner8" parent="." index="14" instance=ExtResource("2_3p22o")]
-position = Vector2(161, 344)
-time = 0.5
-id = 5
-hard_mode = true
-
-[node name="Spawner9" parent="." index="15" instance=ExtResource("2_3p22o")]
-position = Vector2(398, 69)
-time = 0.5
-id = 5
-hard_mode = true
-
-[node name="Spawner10" parent="." index="16" instance=ExtResource("2_3p22o")]
-position = Vector2(178, 70)
-time = 0.5
-id = 5
-hard_mode = true
-
-[node name="Spawner11" parent="." index="17" instance=ExtResource("2_3p22o")]
-position = Vector2(475, 200)
-time = 0.5
-id = 8
-hard_mode = true
-
-[node name="Spawner12" parent="." index="18" instance=ExtResource("2_3p22o")]
-position = Vector2(114, 200)
-time = 0.5
-id = 8
-hard_mode = true

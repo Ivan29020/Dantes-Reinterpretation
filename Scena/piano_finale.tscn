@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2qw4s7rcrdoj"]
+[gd_scene load_steps=3 format=3 uid="uid://idhdnva4gn6p"]
 
 [ext_resource type="PackedScene" uid="uid://bh0juf18k6xbo" path="res://Scena/piano_base.tscn" id="1_8qoy7"]
 [ext_resource type="PackedScene" uid="uid://l8n6m8hpus4q" path="res://Sistemi/Spawner.tscn" id="2_0k1ww"]

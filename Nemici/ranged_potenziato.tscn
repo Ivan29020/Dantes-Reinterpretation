@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8boxa1rgx1bo"]
+
+[ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_sr03k"]
+[ext_resource type="Script" path="res://Nemici/ranged_potenziato.gd" id="2_ve7jk"]
+[ext_resource type="Texture2D" uid="uid://3grnjhw2agkd" path="res://Grafiche/nemici/Eye2/Eye purple left.png" id="3_5qxyy"]
+[ext_resource type="PackedScene" path="res://Proiettili/spawner_occhio.tscn" id="3_r8pj4"]
+[ext_resource type="Texture2D" uid="uid://j8snt0r4xidh" path="res://Grafiche/nemici/Eye2/Eye purple left idle.png" id="4_5glfc"]
+[ext_resource type="Texture2D" uid="uid://bd5bp4qvf3ako" path="res://Grafiche/nemici/Eye2/Eye purple right.png" id="5_ojfrw"]
+[ext_resource type="Texture2D" uid="uid://bdjnbv8dhyyy6" path="res://Grafiche/nemici/Eye2/Eye purple right idle.png" id="6_xj4w3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqdkh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5qxyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5glfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5glfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5qxyy")
+}],
+"loop": true,
+"name": &"Idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ojfrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xj4w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xj4w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ojfrw")
+}],
+"loop": true,
+"name": &"Idle_right",
+"speed": 5.0
+}]
+
+[node name="nemico_base" instance=ExtResource("1_sr03k")]
+script = ExtResource("2_ve7jk")
+maxhp = 60
+hp = 60
+regen = 20
+punteggio = 15
+
+[node name="Sprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_sqdkh")
+animation = &"Idle_right"
+
+[node name="Spawner_proiettili" parent="." index="3" instance=ExtResource("3_r8pj4")]
+velocita_fuoco = 0.4
+velocita_proiettile = 70
+
+[node name="Timer" type="Timer" parent="." index="4"]
+wait_time = 0.41
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -90,7 +90,6 @@ hp = 40
 danni_melee = 5
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_hci6b")
 animation = &"Idle_right"
 
@@ -100,6 +99,7 @@ danno_proiettile = 35
 velocita_proiettile = 80
 
 [node name="Timer" type="Timer" parent="." index="3"]
+wait_time = 5.1
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

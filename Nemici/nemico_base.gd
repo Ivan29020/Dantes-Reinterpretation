@@ -36,9 +36,6 @@ func _process(delta):
 	velocity = dir * vel
 	move_and_slide()
 	
-	
-	
-	
 
 func move_ai():
 	

@@ -89,9 +89,14 @@ hp = 20
 danni_melee = 20
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_5waqk")
 animation = &"Idle_right"
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0.5, 1)
+
+[node name="Timer" type="Timer" parent="." index="3"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

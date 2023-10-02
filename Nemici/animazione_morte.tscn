@@ -1,69 +1,69 @@
 [gd_scene load_steps=18 format=3 uid="uid://b2i4ls7g28id4"]
 
-[ext_resource type="Texture2D" uid="uid://0spc2ou5j47e" path="res://Grafiche/nemici/Morte/Death 1.png" id="1_owvvv"]
-[ext_resource type="Texture2D" uid="uid://djn3byid1ga5r" path="res://Grafiche/nemici/Morte/Death 2.png" id="2_axe1c"]
-[ext_resource type="Texture2D" uid="uid://bs7toirvbptaj" path="res://Grafiche/nemici/Morte/Death 3.png" id="3_rq84q"]
-[ext_resource type="Texture2D" uid="uid://i28l3cop3kjy" path="res://Grafiche/nemici/Morte/Death 4.png" id="4_axxld"]
-[ext_resource type="Texture2D" uid="uid://c4jj38ug3jts8" path="res://Grafiche/nemici/Morte/Death 5.png" id="5_h3wgh"]
-[ext_resource type="Texture2D" uid="uid://dp4hm321pyhop" path="res://Grafiche/nemici/Morte/Death 6.png" id="6_e0mum"]
-[ext_resource type="Texture2D" uid="uid://dh65ebj2k1hwk" path="res://Grafiche/nemici/Morte/Death 7.png" id="7_ccsxk"]
-[ext_resource type="Texture2D" uid="uid://bsmk78t71ojcb" path="res://Grafiche/nemici/Morte/Death 8.png" id="8_d2i7k"]
-[ext_resource type="Texture2D" uid="uid://brkngkb2ql1et" path="res://Grafiche/nemici/Morte/Death 9.png" id="9_x8p1e"]
-[ext_resource type="Texture2D" uid="uid://tcrr61bk8eov" path="res://Grafiche/nemici/Morte/Death 10.png" id="10_7wnhh"]
-[ext_resource type="Texture2D" uid="uid://cim2kh6m8wtnq" path="res://Grafiche/nemici/Morte/Death 11.png" id="11_l3t3j"]
-[ext_resource type="Texture2D" uid="uid://bkhoxev6ykwy3" path="res://Grafiche/nemici/Morte/Death 12.png" id="12_hroug"]
-[ext_resource type="Texture2D" uid="uid://223nl6120i76" path="res://Grafiche/nemici/Morte/Death 13.png" id="13_13urm"]
-[ext_resource type="Texture2D" uid="uid://b6lb3rpxomt0" path="res://Grafiche/nemici/Morte/Death 14.png" id="14_cyy2x"]
-[ext_resource type="Texture2D" uid="uid://dn7ioilafu23s" path="res://Grafiche/nemici/Morte/Death 15.png" id="15_ij8ef"]
-[ext_resource type="Script" path="res://animazione_morte.gd" id="16_rrgra"]
+[ext_resource type="Texture2D" uid="uid://0spc2ou5j47e" path="res://Grafiche/nemici/Morte/Death 1.png" id="1_j3k61"]
+[ext_resource type="Texture2D" uid="uid://djn3byid1ga5r" path="res://Grafiche/nemici/Morte/Death 2.png" id="2_xgbfd"]
+[ext_resource type="Texture2D" uid="uid://bs7toirvbptaj" path="res://Grafiche/nemici/Morte/Death 3.png" id="3_fstae"]
+[ext_resource type="Texture2D" uid="uid://i28l3cop3kjy" path="res://Grafiche/nemici/Morte/Death 4.png" id="4_21r26"]
+[ext_resource type="Texture2D" uid="uid://c4jj38ug3jts8" path="res://Grafiche/nemici/Morte/Death 5.png" id="5_jrg0w"]
+[ext_resource type="Texture2D" uid="uid://dp4hm321pyhop" path="res://Grafiche/nemici/Morte/Death 6.png" id="6_8syiu"]
+[ext_resource type="Texture2D" uid="uid://dh65ebj2k1hwk" path="res://Grafiche/nemici/Morte/Death 7.png" id="7_mcfqh"]
+[ext_resource type="Texture2D" uid="uid://bsmk78t71ojcb" path="res://Grafiche/nemici/Morte/Death 8.png" id="8_yiwjk"]
+[ext_resource type="Texture2D" uid="uid://brkngkb2ql1et" path="res://Grafiche/nemici/Morte/Death 9.png" id="9_cr6xa"]
+[ext_resource type="Texture2D" uid="uid://tcrr61bk8eov" path="res://Grafiche/nemici/Morte/Death 10.png" id="10_4ck10"]
+[ext_resource type="Texture2D" uid="uid://cim2kh6m8wtnq" path="res://Grafiche/nemici/Morte/Death 11.png" id="11_dbqty"]
+[ext_resource type="Texture2D" uid="uid://bkhoxev6ykwy3" path="res://Grafiche/nemici/Morte/Death 12.png" id="12_c4nua"]
+[ext_resource type="Texture2D" uid="uid://223nl6120i76" path="res://Grafiche/nemici/Morte/Death 13.png" id="13_tipu6"]
+[ext_resource type="Texture2D" uid="uid://b6lb3rpxomt0" path="res://Grafiche/nemici/Morte/Death 14.png" id="14_xyuvb"]
+[ext_resource type="Texture2D" uid="uid://dn7ioilafu23s" path="res://Grafiche/nemici/Morte/Death 15.png" id="15_5w3yx"]
+[ext_resource type="Script" path="res://Nemici/animazione_morte.gd" id="16_psqkq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8c8og"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_owvvv")
+"texture": ExtResource("1_j3k61")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_axe1c")
+"texture": ExtResource("2_xgbfd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_rq84q")
+"texture": ExtResource("3_fstae")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_axxld")
+"texture": ExtResource("4_21r26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_h3wgh")
+"texture": ExtResource("5_jrg0w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_e0mum")
+"texture": ExtResource("6_8syiu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ccsxk")
+"texture": ExtResource("7_mcfqh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_d2i7k")
+"texture": ExtResource("8_yiwjk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_x8p1e")
+"texture": ExtResource("9_cr6xa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_7wnhh")
+"texture": ExtResource("10_4ck10")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_l3t3j")
+"texture": ExtResource("11_dbqty")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_hroug")
+"texture": ExtResource("12_c4nua")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_13urm")
+"texture": ExtResource("13_tipu6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_cyy2x")
+"texture": ExtResource("14_xyuvb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_ij8ef")
+"texture": ExtResource("15_5w3yx")
 }],
 "loop": false,
 "name": &"default",
@@ -74,6 +74,6 @@ animations = [{
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_8c8og")
 speed_scale = 20.0
-script = ExtResource("16_rrgra")
+script = ExtResource("16_psqkq")
 
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

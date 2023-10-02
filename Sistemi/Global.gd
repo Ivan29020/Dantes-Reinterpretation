@@ -8,7 +8,7 @@ var upgrades
 var fade
 
 func scene_changed():
-	if !get_tree().current_scene.name == "Menu" or !get_tree().current_scene.name == "game_over" or !get_tree().current_scene.name == "victory":
+	if !get_tree().current_scene.name == "Menu" and !get_tree().current_scene.name == "game_over" and !get_tree().current_scene.name == "victory":
 		tree = get_tree().current_scene
 		Giocatore = tree.get_node("Giocatore")
 		Restrizione = tree.get_node("Restrizione")

@@ -15,13 +15,13 @@ visible = false
 visible = true
 position = Vector2(118, 145)
 time = 1.0
-id = 3
+id = 5
 
 [node name="Spawner2" parent="." index="7" instance=ExtResource("2_wirxb")]
 visible = true
 position = Vector2(134, 255)
 time = 1.0
-id = 3
+id = 7
 
 [node name="Spawner3" parent="." index="8" instance=ExtResource("2_wirxb")]
 visible = true

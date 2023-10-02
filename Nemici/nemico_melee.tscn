@@ -89,7 +89,6 @@ hp = 20
 danni_melee = 20
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_5waqk")
 animation = &"Idle_right"
 

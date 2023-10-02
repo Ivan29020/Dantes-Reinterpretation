@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://7mse6beojogj"]
+
+[ext_resource type="PackedScene" uid="uid://cf8sxoekehwb6" path="res://Nemici/nemico_base.tscn" id="1_02lkh"]
+[ext_resource type="Script" path="res://Nemici/melee_potenziato.gd" id="2_e6h2u"]
+[ext_resource type="Texture2D" uid="uid://crik3nmenrnxb" path="res://Grafiche/nemici/Skull2/Skull demon left.png" id="3_1wafl"]
+[ext_resource type="Texture2D" uid="uid://dars6q26512hf" path="res://Grafiche/nemici/Skull2/Skull demon left idle.png" id="4_7ttts"]
+[ext_resource type="Texture2D" uid="uid://ck1l2q4qquvj4" path="res://Grafiche/nemici/Skull2/Skull demon right.png" id="5_iemve"]
+[ext_resource type="Texture2D" uid="uid://1bk8irf2yd2d" path="res://Grafiche/nemici/Skull2/Skull demon right idle.png" id="6_rlrp0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mrws3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1wafl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7ttts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7ttts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1wafl")
+}],
+"loop": true,
+"name": &"Idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_iemve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rlrp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rlrp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iemve")
+}],
+"loop": true,
+"name": &"Idle_right",
+"speed": 5.0
+}]
+
+[node name="nemico_base" instance=ExtResource("1_02lkh")]
+script = ExtResource("2_e6h2u")
+maxhp = 45
+hp = 45
+regen = 20
+punteggio = 10
+
+[node name="Sprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_mrws3")
+animation = &"Idle_right"

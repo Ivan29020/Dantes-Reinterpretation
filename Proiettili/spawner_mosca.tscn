@@ -8,6 +8,8 @@
 script = ExtResource("2_4onjh")
 amount = 10
 spacing = 0.2
+spazio = 8.0
+quantita = 3
 proiettile_arma = ExtResource("3_wego4")
 velocita_fuoco = 5.0
 

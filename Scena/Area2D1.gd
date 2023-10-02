@@ -5,6 +5,8 @@ var entered = false
 
 @export var scena : String
 
+var is_open : bool = false
+
 func _ready():
 	Global.scene_changed()
 
@@ -15,9 +17,12 @@ func _on_body_entered(body: PhysicsBody2D):
 func _on_body_exited(body):
 	if body == Global.Giocatore:
 		entered = false
-	
+
+func open(apri):
+	is_open = apri
+
 func _process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("button3"):
-			if Global.Killcount.punteggio >= Global.Killcount.obbiettivo:
+			if is_open == true:
 				get_tree().change_scene_to_file(scena)

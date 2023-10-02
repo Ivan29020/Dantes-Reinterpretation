@@ -48,8 +48,8 @@ animations = [{
 
 [node name="nemico_base" instance=ExtResource("1_ca5y3")]
 script = ExtResource("2_msaeu")
-maxhp = 70
-hp = 70
+maxhp = 100
+hp = 100
 regen = 30
 punteggio = 20
 
@@ -63,12 +63,12 @@ spacing = 0.7
 spazio = 6.0
 quantita = 5
 proiettile_arma = ExtResource("8_qoy4w")
-velocita_fuoco = 4.0
+velocita_fuoco = 3.0
 danno_proiettile = 15
 velocita_proiettile = 60
 
 [node name="Timer" type="Timer" parent="." index="4"]
-wait_time = 4.1
+wait_time = 3.1
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

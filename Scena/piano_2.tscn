@@ -10,3 +10,6 @@ metadata/_edit_vertical_guides_ = []
 
 [node name="Giocatore" parent="." instance=ExtResource("2_qgci3")]
 position = Vector2(151, 81)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(1, 0.929412, 1, 1)
